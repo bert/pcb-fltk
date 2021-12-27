@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+src/hid/fltk/bin
+src/hid/fltk/doxygen
+src/hid/fltk/tmp
