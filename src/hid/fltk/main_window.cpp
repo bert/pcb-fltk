@@ -155,7 +155,6 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   /* Configure menu bar items. */
 
-  /* Format: label, shortcut, callback, data, flags. */
   Fl_Menu_Item menu_items[] =
   {
 #include "res/fpcb-menu.res"
@@ -284,7 +283,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _zoom_out_tb->callback ((Fl_Callback *) zoom_out_cb, this);
   _zoom_out_tb->image (ZOOM_OUT_ICON);
 
-  _x_flip_tb->tooltip ("X-flip (Shift + Tab)");
+  _x_flip_tb->tooltip ("X-flip (Shift+Tab)");
   _x_flip_tb->callback ((Fl_Callback *) x_flip_cb, this);
   _x_flip_tb->image (X_FLIP_ICON);
 
