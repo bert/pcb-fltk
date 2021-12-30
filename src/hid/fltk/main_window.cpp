@@ -118,6 +118,14 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   new Fl_Box (0, 0, 2, 24);
   _zoom_out_tb = new Toolbar_Button (0, 0, 24, 24);
   _zoom_in_tb = new Toolbar_Button (0, 0, 24, 24);
+  /*! \todo _zoom_all_tb = new Toolbar_Button (0, 0, 24, 24); */
+  /*! \todo _zoom_10mil_tb = new Toolbar_Button (0, 0, 24, 24); */
+  /*! \todo _zoom_1mil_tb = new Toolbar_Button (0, 0, 24, 24); */
+  /*! \todo _zoom_01mil_tb = new Toolbar_Button (0, 0, 24, 24); */
+  /*! \todo _zoom_01mm_tb = new Toolbar_Button (0, 0, 24, 24); */
+  /*! \todo _zoom_005mm_tb = new Toolbar_Button (0, 0, 24, 24); */
+  /*! \todo _zoom_001mm_tb = new Toolbar_Button (0, 0, 24, 24); */
+  /*! \todo _zoom_1mil_tb = new Toolbar_Button (0, 0, 24, 24); */
   new Fl_Box (0, 0, 2, 24);
   new Spacer (0, 0, 2, 24);
   new Fl_Box (0, 0, 2, 24);
@@ -539,6 +547,60 @@ Main_Window::gschem_cb (Fl_Widget *, Main_Window *mw)
 
 void
 Main_Window::tinycad_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::load_element_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::load_layout_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::load_netlist_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::load_vendor_resource_file_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::save_conn_data_1_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::save_conn_data_all_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::save_conn_data_u_pins_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::export_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::calibrate_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 

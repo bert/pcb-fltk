@@ -167,6 +167,15 @@ class Main_Window : public Fl_Overlay_Window
     static void revert_cb (Fl_Widget *w, Main_Window *mw);
     static void gschem_cb (Fl_Widget *w, Main_Window *mw);
     static void tinycad_cb (Fl_Widget *w, Main_Window *mw);
+    static void load_element_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
+    static void load_layout_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
+    static void load_netlist_cb (Fl_Widget *w, Main_Window *mw);
+    static void load_vendor_resource_file_cb (Fl_Widget *w, Main_Window *mw);
+    static void save_conn_data_1_cb (Fl_Widget *w, Main_Window *mw);
+    static void save_conn_data_all_cb (Fl_Widget *w, Main_Window *mw);
+    static void save_conn_data_u_pins_cb (Fl_Widget *w, Main_Window *mw);
+    static void export_cb (Fl_Widget *w, Main_Window *mw);
+    static void calibrate_cb (Fl_Widget *w, Main_Window *mw);
     static void print_cb (Fl_Widget *w, Main_Window *mw);
 
     /* Edit menu item callbacks. */
