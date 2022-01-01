@@ -162,6 +162,16 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   begin();
 
   /* Main group. */
+  int wgt_h = 22;
+  int win_m = 10;
+  int wgt_m = 4;
+  int tab_h = OS_TAB_HEIGHT;
+
+  _main_group = new Fl_Group (wx, wy, ww, wh);
+  wx += win_m;
+  ww -= win_m * 2;
+  wy += win_m;
+  wh -= win_m * 2;
 
   /* Left group. */
 
@@ -171,6 +181,12 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   /* Drag-and-drop receivers. */
 
   /* Configure window. */
+  box (OS_BG_BOX);
+  size_range (647, 406);
+  resizable (_main_group);
+  callback ((Fl_Callback *) exit_cb, this);
+  xclass (PROGRAM_NAME);
+
 
   /* Configure window icon. */
 

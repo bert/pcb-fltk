@@ -54,6 +54,8 @@
 
 
 #define NUM_RECENT 10
+#define OS_TAB_HEIGHT 20
+
 
 
 class Main_Window : public Fl_Overlay_Window
@@ -62,6 +64,7 @@ class Main_Window : public Fl_Overlay_Window
     /* GUI containers. */
     Fl_Menu_Bar *_menu_bar;
     Toolbar *_toolbar;
+    Fl_Group *_main_group;
 
     Toolbar *_status_bar;
 
