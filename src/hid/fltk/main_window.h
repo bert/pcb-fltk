@@ -63,6 +63,8 @@ class Main_Window : public Fl_Overlay_Window
     Fl_Menu_Bar *_menu_bar;
     Toolbar *_toolbar;
 
+    Toolbar *_status_bar;
+
     /* GUI inputs. */
     Fl_Menu_Item *_transparent_mi = NULL;
     Fl_Menu_Item *_full_screen_mi = NULL;
@@ -98,6 +100,14 @@ class Main_Window : public Fl_Overlay_Window
     Toolbar_Button *_y_flip_tb;
 
     /* GUI outputs. */
+    Label *_view_side_label;
+    Label *_grid_size_label;
+    Label *_line_mode_label;
+    Label *_line_thickness_label;
+    Label *_via_thickness_label;
+    Label *_clearance_label;
+    Label *_text_size_label;
+    Label *_buffer_nr_label;
 
     /* Conditional menu items. */
 
