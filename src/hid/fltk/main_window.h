@@ -51,6 +51,7 @@
 #include "toolbar.h"
 #include "modal_dialog.h"
 #include "about_dialog.h"
+#include "help_window.h"
 
 
 #define NUM_RECENT 10
@@ -115,6 +116,7 @@ class Main_Window : public Fl_Overlay_Window
     /* Conditional menu items. */
 
     /* Dialogs. */
+    Help_Window *_help_dialog;
     About_Dialog *_about_dialog;
 
     /* Data. */

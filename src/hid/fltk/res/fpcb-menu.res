@@ -412,6 +412,7 @@
   {"Netlist", 0, (Fl_Callback *) dummy_cb, this},
   {"Command Entry", ':', (Fl_Callback *) dummy_cb, this},
   {"Pinout", FL_SHIFT + 'd', (Fl_Callback *) dummy_cb, this, FL_MENU_DIVIDER},
+  {"Help...", 0, (Fl_Callback *) help_cb, this},
   {"About...", 0, (Fl_Callback *) about_cb, this},
   {0},
 

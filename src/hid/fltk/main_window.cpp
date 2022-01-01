@@ -176,6 +176,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   /* Left group. */
 
   /* Dialogs. */
+  _help_dialog = new Help_Window (48, 48, 700, 500, PROGRAM_NAME " Help");
 //  _about_dialog = new About_Dialog (this, "About " PROGRAM_NAME, Modal_Dialog::Icon::APP_ICON);
 
   /* Drag-and-drop receivers. */
@@ -340,6 +341,10 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   /* Configure containers. */
 
   /* Configure dialogs. */
+  _help_dialog->content
+  (
+#include "help/pcb.html" /* a C++11 raw string literal. */
+  );
 
 }
 
@@ -861,6 +866,7 @@ Main_Window::y_flip_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::help_cb (Fl_Widget *, Main_Window *mw)
 {
+  mw->_help_dialog->show (mw);
 }
 
 
