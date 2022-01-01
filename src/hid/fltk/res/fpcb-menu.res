@@ -3,7 +3,7 @@
  *
  * \author Bert Timmerman <bert.timmerman@xs4all.nl>
  *
- * \copyright (C) 2021 PCB Contributors.
+ * \copyright (C) 2021, 2022 PCB Contributors.
  *
  * <hr>
  *
