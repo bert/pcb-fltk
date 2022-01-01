@@ -508,6 +508,7 @@ Main_Window::dummy_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
+/* File menu item callbacks. */
 
 void
 Main_Window::new_cb (Fl_Widget *, Main_Window *mw)
@@ -612,6 +613,91 @@ Main_Window::print_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
+Main_Window::preferences_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::quit_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+/* Edit menu item callbacks. */
+
+
+void
+Main_Window::undo_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::redo_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::clear_undo_buffer_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::cut_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::copy_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::paste_from_buffer_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::unselect_all_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::select_all_visible_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::edit_name_of_text_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::edit_name_of_layout_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+void
+Main_Window::edit_name_of_active_layer_cb (Fl_Widget *, Main_Window *mw)
+{
+}
+
+
+/* Tool button callbacks.
+ * Some of the toolbutton callbacks are identical to menu item callbacks. */
+
+
+void
 Main_Window::via_cb (Fl_Widget *, Main_Window *mw)
 {
 }
@@ -709,18 +795,6 @@ Main_Window::load_cb (Fl_Widget *, Main_Window *mw)
 
 void
 Main_Window::reload_cb (Fl_Widget *, Main_Window *mw)
-{
-}
-
-
-void
-Main_Window::undo_cb (Fl_Widget *, Main_Window *mw)
-{
-}
-
-
-void
-Main_Window::redo_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 

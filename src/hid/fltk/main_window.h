@@ -177,8 +177,22 @@ class Main_Window : public Fl_Overlay_Window
     static void export_cb (Fl_Widget *w, Main_Window *mw);
     static void calibrate_cb (Fl_Widget *w, Main_Window *mw);
     static void print_cb (Fl_Widget *w, Main_Window *mw);
+    static void preferences_cb (Fl_Widget *w, Main_Window *mw);
+    static void quit_cb (Fl_Widget *w, Main_Window *mw);
 
     /* Edit menu item callbacks. */
+
+    static void undo_cb (Fl_Widget *w, Main_Window *mw);
+    static void redo_cb (Fl_Widget *w, Main_Window *mw);
+    static void clear_undo_buffer_cb (Fl_Widget *w, Main_Window *mw);
+    static void cut_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
+    static void copy_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
+    static void paste_from_buffer_cb (Fl_Widget *w, Main_Window *mw);
+    static void unselect_all_cb (Fl_Widget *w, Main_Window *mw);
+    static void select_all_visible_cb (Fl_Widget *w, Main_Window *mw);
+    static void edit_name_of_text_cb (Fl_Widget *w, Main_Window *mw);
+    static void edit_name_of_layout_cb (Fl_Widget *w, Main_Window *mw);
+    static void edit_name_of_active_layer_cb (Fl_Widget *w, Main_Window *mw);
 
     /* View menu item callbacks. */
 
@@ -209,9 +223,6 @@ class Main_Window : public Fl_Overlay_Window
 
     static void load_cb (Fl_Widget *w, Main_Window *mw);
     static void reload_cb (Fl_Widget *w, Main_Window *mw);
-
-    static void undo_cb (Fl_Widget *w, Main_Window *mw);
-    static void redo_cb (Fl_Widget *w, Main_Window *mw);
 
     static void zoom_in_cb (Fl_Widget *w, Main_Window *mw);
     static void zoom_out_cb (Fl_Widget *w, Main_Window *mw);
