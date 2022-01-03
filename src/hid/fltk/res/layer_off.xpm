@@ -1,0 +1,26 @@
+/* XPM */
+static const char *layer_off_xpm[] =
+{
+/* Columns rows colors chars-per-pixel. */
+"16 16 3 1",
+"  c None",
+"b c black",
+"l c #8B2323",
+/* Pixels. */
+"                ",
+" bbbbbbbbbbbbbb ",
+" bllllll      b ",
+" blllll       b ",
+" bllll        b ",
+" blll         b ",
+" bll          b ",
+" bl           b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" bbbbbbbbbbbbbb ",
+"                "
+};

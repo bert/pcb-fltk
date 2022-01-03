@@ -74,6 +74,10 @@
 #include "zoom-in.xpm"
 #include "zoom-out.xpm"
 
+#include "layer_empty.xpm"
+#include "layer_on.xpm"
+#include "layer_off.xpm"
+
 
 static Fl_Pixmap BLANK_ICON(BLANK_XPM);
 
@@ -108,6 +112,10 @@ static Fl_Pixmap ZOOM_IN_ICON (zoom_in_xpm);
 static Fl_Pixmap ZOOM_OUT_ICON (zoom_out_xpm);
 static Fl_Pixmap X_FLIP_ICON (x_flip_xpm);
 static Fl_Pixmap Y_FLIP_ICON (y_flip_xpm);
+
+static Fl_Pixmap LAYER_EMPTY_ICON (layer_empty_xpm);
+static Fl_Pixmap LAYER_ON_ICON (layer_on_xpm);
+static Fl_Pixmap LAYER_OFF_ICON (layer_off_xpm);
 
 
 #endif /* PCB_SRC_HID_FLTK_ICONS_H */

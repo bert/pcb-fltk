@@ -1,0 +1,25 @@
+/* XPM */
+static const char *layer_empty_xpm[] =
+{
+/* Columns rows colors chars-per-pixel. */
+"16 16 2 1",
+"  c None",
+"b c black",
+/* Pixels. */
+"                ",
+" bbbbbbbbbbbbbb ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" b            b ",
+" bbbbbbbbbbbbbb ",
+"                "
+};
