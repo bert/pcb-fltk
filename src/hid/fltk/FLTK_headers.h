@@ -49,6 +49,7 @@
 #include <FL/Fl_Group.H>
 #include <FL/Fl_Help_View.H>
 #include <FL/Fl_Image_Surface.H>
+#include <FL/Fl_Light_Button.H>
 #include <FL/Fl_Menu_.H>
 #include <FL/Fl_Menu_Bar.H>
 #include <FL/Fl_Multi_Label.H>
@@ -57,6 +58,7 @@
 #include <FL/Fl_Pixmap.H>
 #include <FL/Fl_PNG_Image.H>
 #include <FL/Fl_Preferences.H>
+#include <FL/Fl_Radio_Round_Button.H>
 #include <FL/Fl_Toggle_Button.H>
 #include <FL/Fl_Tooltip.H>
 #include <FL/Fl_Widget.H>
