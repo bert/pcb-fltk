@@ -52,11 +52,11 @@
 #include "modal_dialog.h"
 #include "about_dialog.h"
 #include "help_window.h"
+#include "label_button.h"
 
 
 #define NUM_RECENT 10
 #define OS_TAB_HEIGHT 20
-
 
 
 class Main_Window : public Fl_Overlay_Window
@@ -66,6 +66,9 @@ class Main_Window : public Fl_Overlay_Window
     Fl_Menu_Bar *_menu_bar;
     Toolbar *_toolbar;
     Fl_Group *_main_group;
+    Fl_Group *_left_group;
+    Fl_Group *_layer_group;
+    Fl_Group *_route_style_group;
 
     Toolbar *_status_bar;
 
@@ -102,6 +105,25 @@ class Main_Window : public Fl_Overlay_Window
 
     Toolbar_Button *_x_flip_tb;
     Toolbar_Button *_y_flip_tb;
+
+    /* Layer dialog: togglebuttons and labels*/
+    Fl_Radio_Round_Button *_layer_1_rb;
+    Fl_Radio_Round_Button *_layer_2_rb;
+    Fl_Radio_Round_Button *_layer_3_rb;
+    Fl_Radio_Round_Button *_layer_4_rb;
+    Fl_Radio_Round_Button *_layer_5_rb;
+
+    Toolbar_Toggle_Button *_layer_1_tb;
+    Toolbar_Toggle_Button *_layer_2_tb;
+    Toolbar_Toggle_Button *_layer_3_tb;
+    Toolbar_Toggle_Button *_layer_4_tb;
+    Toolbar_Toggle_Button *_layer_5_tb;
+
+    Label_Button *_layer_1_lb;
+    Label_Button *_layer_2_lb;
+    Label_Button *_layer_3_lb;
+    Label_Button *_layer_4_lb;
+    Label_Button *_layer_5_lb;
 
     /* GUI outputs. */
     Label *_view_side_label;
@@ -245,6 +267,26 @@ class Main_Window : public Fl_Overlay_Window
     static void x_flip_cb (Fl_Widget *w, Main_Window *mw);
     static void y_flip_cb (Fl_Widget *w, Main_Window *mw);
 
+    /* Layer dialog - radio button callbacks. */
+    static void layer_1_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_2_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_3_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_4_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_5_rb_cb (Fl_Widget *w, Main_Window *mw);
+
+    /* Layer dialog - layer toggle button callbacks. */
+    static void layer_1_tb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_2_tb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_3_tb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_4_tb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_5_tb_cb (Fl_Widget *w, Main_Window *mw);
+
+    /* Layer dialog - label button callbacks. */
+    static void layer_1_label_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_2_label_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_3_label_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_4_label_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_5_label_cb (Fl_Widget *w, Main_Window *mw);
 };
 
 

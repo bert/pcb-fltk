@@ -175,6 +175,51 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   /* Left group. */
 
+  /* Initialize layer dialog. */
+  _left_group = new Fl_Group (wx, wy, 256, wh);
+
+  _left_group->begin ();
+
+  _layer_group = new Fl_Group (wx, wy, 256, 124);
+
+  _layer_group->begin ();
+
+  int lgx = _left_group->x();
+  int lgy = _left_group->y();
+  int lgw = _left_group->w();
+  int lgh = _left_group->h();
+
+  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy, 24, 24, "");
+  _layer_1_tb = new Toolbar_Toggle_Button (wx+24, wy, 24, 24);
+  _layer_1_lb = new Label_Button (wx+48, wy, 72, 24, "Layer 1");
+
+  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+24, 24, 24, "");
+  _layer_2_tb = new Toolbar_Toggle_Button (wx+24, wy+24, 24, 24);
+  _layer_2_lb = new Label_Button (wx+48, wy+24, 72, 24, "Layer 2");
+
+  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+48, 24, 24, "");
+  _layer_3_tb = new Toolbar_Toggle_Button (wx+24, wy+48, 24, 24);
+  _layer_3_lb = new Label_Button (wx+48, wy+48, 72, 24, "Layer 3");
+
+  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+72, 24, 24, "");
+  _layer_4_tb = new Toolbar_Toggle_Button (wx+24, wy+72, 24, 24);
+  _layer_4_lb = new Label_Button (wx+48, wy+72, 72, 24, "Layer 4");
+
+  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+96, 24, 24, "");
+  _layer_5_tb = new Toolbar_Toggle_Button (wx+24, wy+96, 24, 24);
+  _layer_5_lb = new Label_Button (wx+48, wy+96, 72, 24, "Layer 5");
+
+  _layer_group->end ();
+  _layer_group->resizable (NULL);
+
+//  _route_style_group->begin ();
+
+//  _route_style_group->end ();
+
+  _left_group->end ();
+
+  begin ();
+
   /* Dialogs. */
   _help_dialog = new Help_Window (48, 48, 700, 500, PROGRAM_NAME " Help");
 //  _about_dialog = new About_Dialog (this, "About " PROGRAM_NAME, Modal_Dialog::Icon::APP_ICON);
@@ -335,8 +380,42 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _y_flip_tb->callback ((Fl_Callback *) y_flip_cb, this);
   _y_flip_tb->image (Y_FLIP_ICON);
 
+  /* Configure left group. */
 
+  /*! todo This is a mock up (kludge) of the left group - layer dialog.
+   * This requires a proper implementation. */
 
+  _layer_1_rb->callback ((Fl_Callback *) layer_1_rb_cb, this);
+  _layer_1_rb->tooltip ("Set active layer");
+  _layer_1_tb->callback ((Fl_Callback *) layer_1_tb_cb, this);
+  _layer_1_tb->tooltip ("Toggle visibility");
+  _layer_1_tb->image (LAYER_ON_ICON);
+  _layer_1_lb->callback ((Fl_Callback *) layer_1_label_cb, this);
+  _layer_1_lb->tooltip ("Change layer name");
+
+  _layer_2_tb->callback ((Fl_Callback *) layer_2_tb_cb, this);
+  _layer_2_tb->image (LAYER_OFF_ICON);
+  _layer_2_tb->tooltip ("Toggle visibility");
+  _layer_2_lb->callback ((Fl_Callback *) layer_2_label_cb, this);
+  _layer_2_lb->tooltip ("Change layer name");
+
+  _layer_3_tb->callback ((Fl_Callback *) layer_3_tb_cb, this);
+  _layer_3_tb->image (LAYER_EMPTY_ICON);
+  _layer_3_tb->tooltip ("Toggle visibility");
+  _layer_3_lb->callback ((Fl_Callback *) layer_3_label_cb, this);
+  _layer_3_lb->tooltip ("Change layer name");
+
+  _layer_4_tb->callback ((Fl_Callback *) layer_4_tb_cb, this);
+  _layer_4_tb->image (LAYER_EMPTY_ICON);
+  _layer_4_tb->tooltip ("Toggle visibility");
+  _layer_4_lb->callback ((Fl_Callback *) layer_4_label_cb, this);
+  _layer_4_lb->tooltip ("Change layer name");
+
+  _layer_5_tb->callback ((Fl_Callback *) layer_5_tb_cb, this);
+  _layer_5_tb->image (LAYER_EMPTY_ICON);
+  _layer_5_tb->tooltip ("Toggle visibility");
+  _layer_5_lb->callback ((Fl_Callback *) layer_5_label_cb, this);
+  _layer_5_lb->tooltip ("Change layer name");
 
   /* Configure containers. */
 
@@ -874,6 +953,146 @@ void
 Main_Window::about_cb (Fl_Widget *, Main_Window *mw)
 {
 //  mw->_about_dialog->show (mw);
+}
+
+
+void
+Main_Window::layer_1_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+   fprintf (stderr, "Toggled layer 1 radio button.\n");
+   fflush (stderr);
+}
+
+
+void
+Main_Window::layer_2_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+   fprintf (stderr, "Toggled layer 2 radio button.\n");
+   fflush (stderr);
+}
+
+
+void
+Main_Window::layer_3_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+   fprintf (stderr, "Toggled layer 3 radio button.\n");
+   fflush (stderr);
+}
+
+
+void
+Main_Window::layer_4_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+   fprintf (stderr, "Toggled layer 4 radio button.\n");
+   fflush (stderr);
+}
+
+
+void
+Main_Window::layer_5_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+   fprintf (stderr, "Toggled layer 5 radio button.\n");
+   fflush (stderr);
+}
+
+
+void
+Main_Window::layer_1_tb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_2_tb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_3_tb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_4_tb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_5_tb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_1_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_2_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_3_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_4_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_5_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
 }
 
 
