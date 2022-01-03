@@ -55,8 +55,13 @@
 #include "label_button.h"
 
 
+#ifndef NUM_RECENT
 #define NUM_RECENT 10
+#endif
+
+#ifndef OS_TAB_HEIGHT
 #define OS_TAB_HEIGHT 20
+#endif
 
 
 class Main_Window : public Fl_Overlay_Window
