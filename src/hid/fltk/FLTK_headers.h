@@ -44,6 +44,7 @@
 #include <FL/Fl.H>
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Button.H>
+#include <FL/Fl_Check_Button.H>
 #include <FL/Fl_Copy_Surface.H>
 #include <FL/Fl_Double_Window.H>
 #include <FL/Fl_Group.H>

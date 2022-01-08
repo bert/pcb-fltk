@@ -168,10 +168,10 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   int tab_h = OS_TAB_HEIGHT;
 
   _main_group = new Fl_Group (wx, wy, ww, wh);
-  wx += win_m;
-  ww -= win_m * 2;
-  wy += win_m;
-  wh -= win_m * 2;
+//  wx += win_m;
+//  ww -= win_m * 2;
+//  wy += win_m;
+//  wh -= win_m * 2;
 
   /* Left group. */
 
@@ -180,34 +180,67 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   _left_group->begin ();
 
-  _layer_group = new Fl_Group (wx, wy, 256, 124);
+  _layer_group = new Fl_Group (wx, wy, 24 + 24 + 72, 14 * 24);
 
   _layer_group->begin ();
 
-  int lgx = _left_group->x();
-  int lgy = _left_group->y();
-  int lgw = _left_group->w();
-  int lgh = _left_group->h();
+  _layer_1_rb = new Fl_Radio_Round_Button (6, wy, 24, 24, "");
+  _layer_1_cb = new Fl_Check_Button (24, wy, 24, 24);
+  _layer_1_lb = new Label_Button (48, wy, 72, 24, "top");
 
-  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy, 24, 24, "");
-  _layer_1_tb = new Toolbar_Toggle_Button (wx+24, wy, 24, 24);
-  _layer_1_lb = new Label_Button (wx+48, wy, 72, 24, "Layer 1");
+  _layer_2_rb = new Fl_Radio_Round_Button (6, wy+24, 24, 24, "");
+  _layer_2_cb = new Fl_Check_Button (24, wy+24, 24, 24);
+  _layer_2_lb = new Label_Button (48, wy+24, 72, 24, "ground");
 
-  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+24, 24, 24, "");
-  _layer_2_tb = new Toolbar_Toggle_Button (wx+24, wy+24, 24, 24);
-  _layer_2_lb = new Label_Button (wx+48, wy+24, 72, 24, "Layer 2");
+  _layer_3_rb = new Fl_Radio_Round_Button (6, wy+48, 24, 24, "");
+  _layer_3_cb = new Fl_Check_Button (24, wy+48, 24, 24);
+  _layer_3_lb = new Label_Button (48, wy+48, 72, 24, "signal2");
 
-  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+48, 24, 24, "");
-  _layer_3_tb = new Toolbar_Toggle_Button (wx+24, wy+48, 24, 24);
-  _layer_3_lb = new Label_Button (wx+48, wy+48, 72, 24, "Layer 3");
+  _layer_4_rb = new Fl_Radio_Round_Button (6, wy+72, 24, 24, "");
+  _layer_4_cb = new Fl_Check_Button (24, wy+72, 24, 24);
+  _layer_4_lb = new Label_Button (wx+48, wy+72, 72, 24, "signal3");
 
-  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+72, 24, 24, "");
-  _layer_4_tb = new Toolbar_Toggle_Button (wx+24, wy+72, 24, 24);
-  _layer_4_lb = new Label_Button (wx+48, wy+72, 72, 24, "Layer 4");
+  _layer_5_rb = new Fl_Radio_Round_Button (6, wy+96, 24, 24, "");
+  _layer_5_cb = new Fl_Check_Button (24, wy+96, 24, 24);
+  _layer_5_lb = new Label_Button (48, wy+96, 72, 24, "power");
 
-  _layer_1_rb = new Fl_Radio_Round_Button (wx, wy+96, 24, 24, "");
-  _layer_5_tb = new Toolbar_Toggle_Button (wx+24, wy+96, 24, 24);
-  _layer_5_lb = new Label_Button (wx+48, wy+96, 72, 24, "Layer 5");
+  _layer_6_rb = new Fl_Radio_Round_Button (6, wy+120, 24, 24, "");
+  _layer_6_cb = new Fl_Check_Button (24, wy+120, 24, 24);
+  _layer_6_lb = new Label_Button (48, wy+120, 72, 24, "bottom");
+
+  _layer_7_rb = new Fl_Radio_Round_Button (6, wy+144, 24, 24, "");
+  _layer_7_cb = new Fl_Check_Button (24, wy+144, 24, 24);
+  _layer_7_lb = new Label_Button (48, wy+144, 72, 24, "outline");
+
+  _layer_8_rb = new Fl_Radio_Round_Button (6, wy+168, 24, 24, "");
+  _layer_8_cb = new Fl_Check_Button (24, wy+168, 24, 24);
+  _layer_8_lb = new Label_Button (48, wy+168, 72, 24, "spare");
+
+  _layer_9_rb = new Fl_Radio_Round_Button (6, wy+192, 24, 24, "");
+  _layer_9_cb = new Fl_Check_Button (24, wy+192, 24, 24);
+  _layer_9_lb = new Label_Button (48, wy+192, 72, 24, "top silk");
+
+  _layer_10_rb = new Fl_Radio_Round_Button (6, wy+216, 24, 24, "");
+  _layer_10_cb = new Fl_Check_Button (24, wy+216, 24, 24);
+  _layer_10_lb = new Label_Button (48, wy+216, 72, 24, "rat lines");
+
+  new Spacer (10, wy+240, 24 + 24 + 82, 2);
+
+  _layer_11_rb = new Fl_Radio_Round_Button (6, wy+242, 24, 24, "");
+  _layer_11_cb = new Fl_Check_Button (24, wy+242, 24, 24);
+  _layer_11_lb = new Label_Button (48, wy+242, 72, 24, "pins/pads");
+
+  _layer_12_rb = new Fl_Radio_Round_Button (6, wy+266, 24, 24, "");
+  _layer_12_cb = new Fl_Check_Button (24, wy+266, 24, 24);
+  _layer_12_lb = new Label_Button (48, wy+266, 72, 24, "vias");
+
+  _layer_13_rb = new Fl_Radio_Round_Button (6, wy+290, 24, 24, "");
+  _layer_13_cb = new Fl_Check_Button (24, wy+290, 24, 24);
+  _layer_13_lb = new Label_Button (48, wy+290, 72, 24, "far side");
+
+  _layer_14_rb = new Fl_Radio_Round_Button (6, wy+314, 24, 24, "");
+  _layer_14_cb = new Fl_Check_Button (24, wy+314, 24, 24);
+  _layer_14_lb = new Label_Button (48, wy+314, 80, 24, "solder mask");
 
   _layer_group->end ();
   _layer_group->resizable (NULL);
@@ -217,6 +250,12 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 //  _route_style_group->end ();
 
   _left_group->end ();
+  _left_group->resizable (NULL);
+
+  int lgx = _left_group->x();
+  int lgy = _left_group->y();
+  int lgw = _left_group->w();
+  int lgh = _left_group->h();
 
   begin ();
 
@@ -387,35 +426,101 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   _layer_1_rb->callback ((Fl_Callback *) layer_1_rb_cb, this);
   _layer_1_rb->tooltip ("Set active layer");
-  _layer_1_tb->callback ((Fl_Callback *) layer_1_tb_cb, this);
-  _layer_1_tb->tooltip ("Toggle visibility");
-  _layer_1_tb->image (LAYER_ON_ICON);
+  _layer_1_cb->callback ((Fl_Callback *) layer_1_cb_cb, this);
+  _layer_1_cb->tooltip ("Toggle visibility");
   _layer_1_lb->callback ((Fl_Callback *) layer_1_label_cb, this);
-  _layer_1_lb->tooltip ("Change layer name");
+  _layer_1_lb->tooltip ("Change layer properties");
 
-  _layer_2_tb->callback ((Fl_Callback *) layer_2_tb_cb, this);
-  _layer_2_tb->image (LAYER_OFF_ICON);
-  _layer_2_tb->tooltip ("Toggle visibility");
+  _layer_2_rb->callback ((Fl_Callback *) layer_2_rb_cb, this);
+  _layer_2_rb->tooltip ("Set active layer");
+  _layer_2_cb->callback ((Fl_Callback *) layer_2_cb_cb, this);
+  _layer_2_cb->tooltip ("Toggle visibility");
   _layer_2_lb->callback ((Fl_Callback *) layer_2_label_cb, this);
-  _layer_2_lb->tooltip ("Change layer name");
+  _layer_2_lb->tooltip ("Change layer properties");
 
-  _layer_3_tb->callback ((Fl_Callback *) layer_3_tb_cb, this);
-  _layer_3_tb->image (LAYER_EMPTY_ICON);
-  _layer_3_tb->tooltip ("Toggle visibility");
+  _layer_3_rb->callback ((Fl_Callback *) layer_3_rb_cb, this);
+  _layer_3_rb->tooltip ("Set active layer");
+  _layer_3_cb->callback ((Fl_Callback *) layer_3_cb_cb, this);
+  _layer_3_cb->tooltip ("Toggle visibility");
   _layer_3_lb->callback ((Fl_Callback *) layer_3_label_cb, this);
-  _layer_3_lb->tooltip ("Change layer name");
+  _layer_3_lb->tooltip ("Change layer properties");
 
-  _layer_4_tb->callback ((Fl_Callback *) layer_4_tb_cb, this);
-  _layer_4_tb->image (LAYER_EMPTY_ICON);
-  _layer_4_tb->tooltip ("Toggle visibility");
+  _layer_4_rb->callback ((Fl_Callback *) layer_4_rb_cb, this);
+  _layer_4_rb->tooltip ("Set active layer");
+  _layer_4_cb->callback ((Fl_Callback *) layer_4_cb_cb, this);
+  _layer_4_cb->tooltip ("Toggle visibility");
   _layer_4_lb->callback ((Fl_Callback *) layer_4_label_cb, this);
-  _layer_4_lb->tooltip ("Change layer name");
+  _layer_4_lb->tooltip ("Change layer properties");
 
-  _layer_5_tb->callback ((Fl_Callback *) layer_5_tb_cb, this);
-  _layer_5_tb->image (LAYER_EMPTY_ICON);
-  _layer_5_tb->tooltip ("Toggle visibility");
+  _layer_5_rb->callback ((Fl_Callback *) layer_5_rb_cb, this);
+  _layer_5_rb->tooltip ("Set active layer");
+  _layer_5_cb->callback ((Fl_Callback *) layer_5_cb_cb, this);
+  _layer_5_cb->tooltip ("Toggle visibility");
   _layer_5_lb->callback ((Fl_Callback *) layer_5_label_cb, this);
-  _layer_5_lb->tooltip ("Change layer name");
+  _layer_5_lb->tooltip ("Change layer properties");
+
+  _layer_6_rb->callback ((Fl_Callback *) layer_6_rb_cb, this);
+  _layer_6_rb->tooltip ("Set active layer");
+  _layer_6_cb->callback ((Fl_Callback *) layer_6_cb_cb, this);
+  _layer_6_cb->tooltip ("Toggle visibility");
+  _layer_6_lb->callback ((Fl_Callback *) layer_6_label_cb, this);
+  _layer_6_lb->tooltip ("Change layer properties");
+
+  _layer_7_rb->callback ((Fl_Callback *) layer_7_rb_cb, this);
+  _layer_7_rb->tooltip ("Set active layer");
+  _layer_7_cb->callback ((Fl_Callback *) layer_7_cb_cb, this);
+  _layer_7_cb->tooltip ("Toggle visibility");
+  _layer_7_lb->callback ((Fl_Callback *) layer_7_label_cb, this);
+  _layer_7_lb->tooltip ("Change layer properties");
+
+  _layer_8_rb->callback ((Fl_Callback *) layer_8_rb_cb, this);
+  _layer_8_rb->tooltip ("Set active layer");
+  _layer_8_cb->callback ((Fl_Callback *) layer_8_cb_cb, this);
+  _layer_8_cb->tooltip ("Toggle visibility");
+  _layer_8_lb->callback ((Fl_Callback *) layer_8_label_cb, this);
+  _layer_8_lb->tooltip ("Change layer properties");
+
+  _layer_9_rb->callback ((Fl_Callback *) layer_9_rb_cb, this);
+  _layer_9_rb->tooltip ("Set active layer");
+  _layer_9_cb->callback ((Fl_Callback *) layer_9_cb_cb, this);
+  _layer_9_cb->tooltip ("Toggle visibility");
+  _layer_9_lb->callback ((Fl_Callback *) layer_9_label_cb, this);
+  _layer_9_lb->tooltip ("Change layer properties");
+
+  _layer_10_rb->callback ((Fl_Callback *) layer_10_rb_cb, this);
+  _layer_10_rb->tooltip ("Set active layer");
+  _layer_10_cb->callback ((Fl_Callback *) layer_10_cb_cb, this);
+  _layer_10_cb->tooltip ("Toggle visibility");
+  _layer_10_lb->callback ((Fl_Callback *) layer_10_label_cb, this);
+  _layer_10_lb->tooltip ("Change layer properties");
+
+  _layer_11_rb->callback ((Fl_Callback *) layer_11_rb_cb, this);
+  _layer_11_rb->tooltip ("Set active layer");
+  _layer_11_cb->callback ((Fl_Callback *) layer_11_cb_cb, this);
+  _layer_11_cb->tooltip ("Toggle visibility");
+  _layer_11_lb->callback ((Fl_Callback *) layer_11_label_cb, this);
+  _layer_11_lb->tooltip ("Change layer properties");
+
+  _layer_12_rb->callback ((Fl_Callback *) layer_12_rb_cb, this);
+  _layer_12_rb->tooltip ("Set active layer");
+  _layer_12_cb->callback ((Fl_Callback *) layer_12_cb_cb, this);
+  _layer_12_cb->tooltip ("Toggle visibility");
+  _layer_12_lb->callback ((Fl_Callback *) layer_12_label_cb, this);
+  _layer_12_lb->tooltip ("Change layer properties");
+
+  _layer_13_rb->callback ((Fl_Callback *) layer_13_rb_cb, this);
+  _layer_13_rb->tooltip ("Set active layer");
+  _layer_13_cb->callback ((Fl_Callback *) layer_13_cb_cb, this);
+  _layer_13_cb->tooltip ("Toggle visibility");
+  _layer_13_lb->callback ((Fl_Callback *) layer_13_label_cb, this);
+  _layer_13_lb->tooltip ("Change layer properties");
+
+  _layer_14_rb->callback ((Fl_Callback *) layer_14_rb_cb, this);
+  _layer_14_rb->tooltip ("Set active layer");
+  _layer_14_cb->callback ((Fl_Callback *) layer_14_cb_cb, this);
+  _layer_14_cb->tooltip ("Toggle visibility");
+  _layer_14_lb->callback ((Fl_Callback *) layer_14_label_cb, this);
+  _layer_14_lb->tooltip ("Change layer properties");
 
   /* Configure containers. */
 
@@ -961,8 +1066,6 @@ Main_Window::layer_1_rb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
-   fprintf (stderr, "Toggled layer 1 radio button.\n");
-   fflush (stderr);
 }
 
 
@@ -971,8 +1074,6 @@ Main_Window::layer_2_rb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
-   fprintf (stderr, "Toggled layer 2 radio button.\n");
-   fflush (stderr);
 }
 
 
@@ -981,8 +1082,6 @@ Main_Window::layer_3_rb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
-   fprintf (stderr, "Toggled layer 3 radio button.\n");
-   fflush (stderr);
 }
 
 
@@ -991,8 +1090,6 @@ Main_Window::layer_4_rb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
-   fprintf (stderr, "Toggled layer 4 radio button.\n");
-   fflush (stderr);
 }
 
 
@@ -1001,13 +1098,83 @@ Main_Window::layer_5_rb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
-   fprintf (stderr, "Toggled layer 5 radio button.\n");
-   fflush (stderr);
 }
 
 
 void
-Main_Window::layer_1_tb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_6_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_7_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_8_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_9_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_10_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_11_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_12_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_13_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_14_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active layer name needs to be passed to the
+   * pcb data structs. */
+}
+
+
+void
+Main_Window::layer_1_cb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1016,7 +1183,7 @@ Main_Window::layer_1_tb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_2_tb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_2_cb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1025,7 +1192,7 @@ Main_Window::layer_2_tb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_3_tb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_3_cb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1034,7 +1201,7 @@ Main_Window::layer_3_tb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_4_tb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_4_cb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1043,7 +1210,88 @@ Main_Window::layer_4_tb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_5_tb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_5_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_6_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_7_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_8_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_9_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_10_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_11_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_12_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_13_cb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, update the icon.
+   * The layer state (on/off) needs to be passed to the pcb data structs
+   * as well. */
+}
+
+
+void
+Main_Window::layer_14_cb_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1089,6 +1337,87 @@ Main_Window::layer_4_label_cb (Fl_Widget *, Main_Window *mw)
 
 void
 Main_Window::layer_5_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_6_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_7_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_8_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_9_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_10_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_11_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_12_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_13_label_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the name of the layer.
+   * The new layer name needs to be passed to the pcb data structs as
+   * well. */
+}
+
+
+void
+Main_Window::layer_14_label_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
