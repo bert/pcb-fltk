@@ -111,7 +111,7 @@ class Main_Window : public Fl_Overlay_Window
     Toolbar_Button *_x_flip_tb;
     Toolbar_Button *_y_flip_tb;
 
-    /* Layer dialog: togglebuttons and labels*/
+    /* Layer dialog: toggle buttons. */
     Fl_Radio_Round_Button *_layer_1_rb;
     Fl_Radio_Round_Button *_layer_2_rb;
     Fl_Radio_Round_Button *_layer_3_rb;
@@ -127,6 +127,7 @@ class Main_Window : public Fl_Overlay_Window
     Fl_Radio_Round_Button *_layer_13_rb;
     Fl_Radio_Round_Button *_layer_14_rb;
 
+    /* Layer dialog: check buttons. */
     Fl_Check_Button *_layer_1_cb;
     Fl_Check_Button *_layer_2_cb;
     Fl_Check_Button *_layer_3_cb;
@@ -142,20 +143,21 @@ class Main_Window : public Fl_Overlay_Window
     Fl_Check_Button *_layer_13_cb;
     Fl_Check_Button *_layer_14_cb;
 
-    Label_Button *_layer_1_lb;
-    Label_Button *_layer_2_lb;
-    Label_Button *_layer_3_lb;
-    Label_Button *_layer_4_lb;
-    Label_Button *_layer_5_lb;
-    Label_Button *_layer_6_lb;
-    Label_Button *_layer_7_lb;
-    Label_Button *_layer_8_lb;
-    Label_Button *_layer_9_lb;
-    Label_Button *_layer_10_lb;
-    Label_Button *_layer_11_lb;
-    Label_Button *_layer_12_lb;
-    Label_Button *_layer_13_lb;
-    Label_Button *_layer_14_lb;
+    /* Layer dialog: layer change properties buttons. */
+    Fl_Button *_layer_1_lb;
+    Fl_Button *_layer_2_lb;
+    Fl_Button *_layer_3_lb;
+    Fl_Button *_layer_4_lb;
+    Fl_Button *_layer_5_lb;
+    Fl_Button *_layer_6_lb;
+    Fl_Button *_layer_7_lb;
+    Fl_Button *_layer_8_lb;
+    Fl_Button *_layer_9_lb;
+    Fl_Button *_layer_10_lb;
+    Fl_Button *_layer_11_lb;
+    Fl_Button *_layer_12_lb;
+    Fl_Button *_layer_13_lb;
+    Fl_Button *_layer_14_lb;
 
     /* GUI outputs. */
     Label *_view_side_label;

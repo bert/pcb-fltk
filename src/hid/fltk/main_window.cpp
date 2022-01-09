@@ -186,61 +186,61 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   _layer_1_rb = new Fl_Radio_Round_Button (6, wy, 24, 24, "");
   _layer_1_cb = new Fl_Check_Button (24, wy, 24, 24);
-  _layer_1_lb = new Label_Button (48, wy, 72, 24, "top");
+  _layer_1_lb = new Fl_Button (48, wy, 100, 24, "top");
 
   _layer_2_rb = new Fl_Radio_Round_Button (6, wy+24, 24, 24, "");
   _layer_2_cb = new Fl_Check_Button (24, wy+24, 24, 24);
-  _layer_2_lb = new Label_Button (48, wy+24, 72, 24, "ground");
+  _layer_2_lb = new Fl_Button (48, wy+24, 100, 24, "ground");
 
   _layer_3_rb = new Fl_Radio_Round_Button (6, wy+48, 24, 24, "");
   _layer_3_cb = new Fl_Check_Button (24, wy+48, 24, 24);
-  _layer_3_lb = new Label_Button (48, wy+48, 72, 24, "signal2");
+  _layer_3_lb = new Fl_Button (48, wy+48, 100, 24, "signal2");
 
   _layer_4_rb = new Fl_Radio_Round_Button (6, wy+72, 24, 24, "");
   _layer_4_cb = new Fl_Check_Button (24, wy+72, 24, 24);
-  _layer_4_lb = new Label_Button (wx+48, wy+72, 72, 24, "signal3");
+  _layer_4_lb = new Fl_Button (wx+48, wy+72, 100, 24, "signal3");
 
   _layer_5_rb = new Fl_Radio_Round_Button (6, wy+96, 24, 24, "");
   _layer_5_cb = new Fl_Check_Button (24, wy+96, 24, 24);
-  _layer_5_lb = new Label_Button (48, wy+96, 72, 24, "power");
+  _layer_5_lb = new Fl_Button (48, wy+96, 100, 24, "power");
 
   _layer_6_rb = new Fl_Radio_Round_Button (6, wy+120, 24, 24, "");
   _layer_6_cb = new Fl_Check_Button (24, wy+120, 24, 24);
-  _layer_6_lb = new Label_Button (48, wy+120, 72, 24, "bottom");
+  _layer_6_lb = new Fl_Button (48, wy+120, 100, 24, "bottom");
 
   _layer_7_rb = new Fl_Radio_Round_Button (6, wy+144, 24, 24, "");
   _layer_7_cb = new Fl_Check_Button (24, wy+144, 24, 24);
-  _layer_7_lb = new Label_Button (48, wy+144, 72, 24, "outline");
+  _layer_7_lb = new Fl_Button (48, wy+144, 100, 24, "outline");
 
   _layer_8_rb = new Fl_Radio_Round_Button (6, wy+168, 24, 24, "");
   _layer_8_cb = new Fl_Check_Button (24, wy+168, 24, 24);
-  _layer_8_lb = new Label_Button (48, wy+168, 72, 24, "spare");
+  _layer_8_lb = new Fl_Button (48, wy+168, 100, 24, "spare");
 
   _layer_9_rb = new Fl_Radio_Round_Button (6, wy+192, 24, 24, "");
   _layer_9_cb = new Fl_Check_Button (24, wy+192, 24, 24);
-  _layer_9_lb = new Label_Button (48, wy+192, 72, 24, "top silk");
+  _layer_9_lb = new Fl_Button (48, wy+192, 100, 24, "top silk");
 
   _layer_10_rb = new Fl_Radio_Round_Button (6, wy+216, 24, 24, "");
   _layer_10_cb = new Fl_Check_Button (24, wy+216, 24, 24);
-  _layer_10_lb = new Label_Button (48, wy+216, 72, 24, "rat lines");
+  _layer_10_lb = new Fl_Button (48, wy+216, 100, 24, "rat lines");
 
   new Spacer (10, wy+240, 24 + 24 + 82, 2);
 
   _layer_11_rb = new Fl_Radio_Round_Button (6, wy+242, 24, 24, "");
   _layer_11_cb = new Fl_Check_Button (24, wy+242, 24, 24);
-  _layer_11_lb = new Label_Button (48, wy+242, 72, 24, "pins/pads");
+  _layer_11_lb = new Fl_Button (48, wy+242, 100, 24, "pins/pads");
 
   _layer_12_rb = new Fl_Radio_Round_Button (6, wy+266, 24, 24, "");
   _layer_12_cb = new Fl_Check_Button (24, wy+266, 24, 24);
-  _layer_12_lb = new Label_Button (48, wy+266, 72, 24, "vias");
+  _layer_12_lb = new Fl_Button (48, wy+266, 100, 24, "vias");
 
   _layer_13_rb = new Fl_Radio_Round_Button (6, wy+290, 24, 24, "");
   _layer_13_cb = new Fl_Check_Button (24, wy+290, 24, 24);
-  _layer_13_lb = new Label_Button (48, wy+290, 72, 24, "far side");
+  _layer_13_lb = new Fl_Button (48, wy+290, 100, 24, "far side");
 
   _layer_14_rb = new Fl_Radio_Round_Button (6, wy+314, 24, 24, "");
   _layer_14_cb = new Fl_Check_Button (24, wy+314, 24, 24);
-  _layer_14_lb = new Label_Button (48, wy+314, 80, 24, "solder mask");
+  _layer_14_lb = new Fl_Button (48, wy+314, 100, 24, "solder mask");
 
   _layer_group->end ();
   _layer_group->resizable (NULL);
@@ -432,6 +432,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_1_cb->set ();
   _layer_1_lb->callback ((Fl_Callback *) layer_1_label_cb, this);
   _layer_1_lb->tooltip ("Change layer properties");
+  _layer_1_lb->box (FL_DOWN_BOX);
+  _layer_1_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_1_lb->color (0x8B2323);
 
   _layer_2_rb->callback ((Fl_Callback *) layer_2_rb_cb, this);
   _layer_2_rb->tooltip ("Set active layer");
@@ -440,6 +443,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_2_cb->set ();
   _layer_2_lb->callback ((Fl_Callback *) layer_2_label_cb, this);
   _layer_2_lb->tooltip ("Change layer properties");
+  _layer_2_lb->box (FL_DOWN_BOX);
+  _layer_2_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_2_lb->color (0x3A5FCD);
 
   _layer_3_rb->callback ((Fl_Callback *) layer_3_rb_cb, this);
   _layer_3_rb->tooltip ("Set active layer");
@@ -448,6 +454,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_3_cb->set ();
   _layer_3_lb->callback ((Fl_Callback *) layer_3_label_cb, this);
   _layer_3_lb->tooltip ("Change layer properties");
+  _layer_3_lb->box (FL_DOWN_BOX);
+  _layer_3_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_3_lb->color (0x104E8B);
 
   _layer_4_rb->callback ((Fl_Callback *) layer_4_rb_cb, this);
   _layer_4_rb->tooltip ("Set active layer");
@@ -456,6 +465,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_4_cb->set ();
   _layer_4_lb->callback ((Fl_Callback *) layer_4_label_cb, this);
   _layer_4_lb->tooltip ("Change layer properties");
+  _layer_4_lb->box (FL_DOWN_BOX);
+  _layer_4_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_4_lb->color (0xCD3700);
 
   _layer_5_rb->callback ((Fl_Callback *) layer_5_rb_cb, this);
   _layer_5_rb->tooltip ("Set active layer");
@@ -464,6 +476,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_5_cb->set ();
   _layer_5_lb->callback ((Fl_Callback *) layer_5_label_cb, this);
   _layer_5_lb->tooltip ("Change layer properties");
+  _layer_5_lb->box (FL_DOWN_BOX);
+  _layer_5_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_5_lb->color (0x548B54);
 
   _layer_6_rb->callback ((Fl_Callback *) layer_6_rb_cb, this);
   _layer_6_rb->tooltip ("Set active layer");
@@ -472,6 +487,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_6_cb->set ();
   _layer_6_lb->callback ((Fl_Callback *) layer_6_label_cb, this);
   _layer_6_lb->tooltip ("Change layer properties");
+  _layer_6_lb->box (FL_DOWN_BOX);
+  _layer_6_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_6_lb->color (0x8B7355);
 
   _layer_7_rb->callback ((Fl_Callback *) layer_7_rb_cb, this);
   _layer_7_rb->tooltip ("Set active layer");
@@ -480,6 +498,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_7_cb->set ();
   _layer_7_lb->callback ((Fl_Callback *) layer_7_label_cb, this);
   _layer_7_lb->tooltip ("Change layer properties");
+  _layer_7_lb->box (FL_DOWN_BOX);
+  _layer_7_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_7_lb->color (0x00868B);
 
   _layer_8_rb->callback ((Fl_Callback *) layer_8_rb_cb, this);
   _layer_8_rb->tooltip ("Set active layer");
@@ -488,6 +509,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_8_cb->set ();
   _layer_8_lb->callback ((Fl_Callback *) layer_8_label_cb, this);
   _layer_8_lb->tooltip ("Change layer properties");
+  _layer_8_lb->box (FL_DOWN_BOX);
+  _layer_8_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_8_lb->color (0x228B22);
 
   _layer_9_rb->callback ((Fl_Callback *) layer_9_rb_cb, this);
   _layer_9_rb->tooltip ("Set active layer");
@@ -496,6 +520,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_9_cb->set ();
   _layer_9_lb->callback ((Fl_Callback *) layer_9_label_cb, this);
   _layer_9_lb->tooltip ("Change layer properties");
+  _layer_9_lb->box (FL_DOWN_BOX);
+  _layer_9_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_9_lb->color (0x8B2323);
 
   _layer_10_rb->callback ((Fl_Callback *) layer_10_rb_cb, this);
   _layer_10_rb->tooltip ("Set active layer");
@@ -504,6 +531,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_10_cb->set ();
   _layer_10_lb->callback ((Fl_Callback *) layer_10_label_cb, this);
   _layer_10_lb->tooltip ("Change layer properties");
+  _layer_10_lb->box (FL_DOWN_BOX);
+  _layer_10_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_10_lb->color (0x3A5FCD);
 
   _layer_11_rb->callback ((Fl_Callback *) layer_11_rb_cb, this);
   _layer_11_rb->tooltip ("Set active layer");
@@ -512,6 +542,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_11_cb->set ();
   _layer_11_lb->callback ((Fl_Callback *) layer_11_label_cb, this);
   _layer_11_lb->tooltip ("Change layer properties");
+  _layer_11_lb->box (FL_DOWN_BOX);
+  _layer_11_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_11_lb->color (0x104E8B);
 
   _layer_12_rb->callback ((Fl_Callback *) layer_12_rb_cb, this);
   _layer_12_rb->tooltip ("Set active layer");
@@ -520,6 +553,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_12_cb->set ();
   _layer_12_lb->callback ((Fl_Callback *) layer_12_label_cb, this);
   _layer_12_lb->tooltip ("Change layer properties");
+  _layer_12_lb->box (FL_DOWN_BOX);
+  _layer_12_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_12_lb->color (0xCD3700);
 
   _layer_13_rb->callback ((Fl_Callback *) layer_13_rb_cb, this);
   _layer_13_rb->tooltip ("Set active layer");
@@ -528,6 +564,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_13_cb->set ();
   _layer_13_lb->callback ((Fl_Callback *) layer_13_label_cb, this);
   _layer_13_lb->tooltip ("Change layer properties");
+  _layer_13_lb->box (FL_DOWN_BOX);
+  _layer_13_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_13_lb->color (0x548B54);
 
   _layer_14_rb->callback ((Fl_Callback *) layer_14_rb_cb, this);
   _layer_14_rb->tooltip ("Set active layer");
@@ -535,6 +574,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_14_cb->tooltip ("Toggle visibility");
   _layer_14_lb->callback ((Fl_Callback *) layer_14_label_cb, this);
   _layer_14_lb->tooltip ("Change layer properties");
+  _layer_14_lb->box (FL_DOWN_BOX);
+  _layer_14_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _layer_14_lb->color (0x670183);
 
   /* Configure containers. */
 
