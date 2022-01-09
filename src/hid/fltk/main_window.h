@@ -81,6 +81,7 @@ class Main_Window : public Fl_Overlay_Window
     Fl_Menu_Item *_transparent_mi = NULL;
     Fl_Menu_Item *_full_screen_mi = NULL;
 
+    /* Toolbar menu buttons. */
     Toolbar_Button *_new_tb;
     Toolbar_Button *_open_tb;
     Toolbar_Button *_save_tb;
