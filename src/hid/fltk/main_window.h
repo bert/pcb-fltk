@@ -160,6 +160,9 @@ class Main_Window : public Fl_Overlay_Window
     Fl_Button *_layer_13_lb;
     Fl_Button *_layer_14_lb;
 
+    /* Trackball (place holder).*/
+    Fl_Button *_trackball;
+
     /* GUI outputs. */
     Label *_view_side_label;
     Label *_grid_size_label;

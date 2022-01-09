@@ -245,6 +245,8 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_group->end ();
   _layer_group->resizable (NULL);
 
+  _trackball = new Fl_Button (0, wy+314+24, 148, 148, "Trackball");
+
 //  _route_style_group->begin ();
 
 //  _route_style_group->end ();
@@ -577,6 +579,9 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_14_lb->box (FL_DOWN_BOX);
   _layer_14_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_14_lb->color (0x670183);
+
+  _trackball->box (FL_DOWN_BOX);
+
 
   /* Configure containers. */
 
