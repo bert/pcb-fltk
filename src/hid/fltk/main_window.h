@@ -163,6 +163,18 @@ class Main_Window : public Fl_Overlay_Window
     /* Trackball (place holder).*/
     Fl_Button *_trackball;
 
+    /* Route style dialog: radio buttons.*/
+    Fl_Radio_Round_Button *_route_style_1_rb;
+    Fl_Radio_Round_Button *_route_style_2_rb;
+    Fl_Radio_Round_Button *_route_style_3_rb;
+    Fl_Radio_Round_Button *_route_style_4_rb;
+
+    /* Route style dialog: route style change properties label buttons. */
+    Fl_Button *_route_style_1_lb;
+    Fl_Button *_route_style_2_lb;
+    Fl_Button *_route_style_3_lb;
+    Fl_Button *_route_style_4_lb;
+
     /* GUI outputs. */
     Label *_view_side_label;
     Label *_grid_size_label;

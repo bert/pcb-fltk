@@ -245,11 +245,22 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_group->end ();
   _layer_group->resizable (NULL);
 
-  _trackball = new Fl_Button (0, wy+314+24, 148, 148, "Trackball");
+  _trackball = new Fl_Button (0, wy+338, 148, 148, "Trackball");
 
-//  _route_style_group->begin ();
+  _route_style_group = new Fl_Group (6, wy+486, 124, 4 * 24);
+  _route_style_group->begin ();
 
-//  _route_style_group->end ();
+  _route_style_1_rb = new Fl_Radio_Round_Button (6, wy+486, 24, 24, "");
+  _route_style_1_lb = new Fl_Button (24, wy+486, 124, 24, "Signal");
+  _route_style_2_rb = new Fl_Radio_Round_Button (6, wy+510, 24, 24, "");
+  _route_style_2_lb = new Fl_Button (24, wy+510, 124, 24, "Power");
+  _route_style_3_rb = new Fl_Radio_Round_Button (6, wy+534, 24, 24, "");
+  _route_style_3_lb = new Fl_Button (24, wy+534, 124, 24, "Fat");
+  _route_style_4_rb = new Fl_Radio_Round_Button (6, wy+558, 24, 24, "");
+  _route_style_4_lb = new Fl_Button (24, wy+558, 124, 24, "Skinny");
+
+  _route_style_group->end ();
+  _route_style_group->resizable (NULL);
 
   _left_group->end ();
   _left_group->resizable (NULL);
@@ -582,6 +593,23 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   _trackball->box (FL_DOWN_BOX);
 
+  _route_style_1_rb->tooltip ("Set active route style");
+  _route_style_1_rb->setonly ();
+  _route_style_1_lb->tooltip ("Change route style properties");
+  _route_style_1_lb->box (FL_DOWN_BOX);
+  _route_style_1_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _route_style_2_rb->tooltip ("Set active route style");
+  _route_style_2_lb->tooltip ("Change route style properties");
+  _route_style_2_lb->box (FL_DOWN_BOX);
+  _route_style_2_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _route_style_3_rb->tooltip ("Set active route style");
+  _route_style_3_lb->tooltip ("Change route style properties");
+  _route_style_3_lb->box (FL_DOWN_BOX);
+  _route_style_3_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+  _route_style_4_rb->tooltip ("Set active route style");
+  _route_style_4_lb->tooltip ("Change route style properties");
+  _route_style_4_lb->box (FL_DOWN_BOX);
+  _route_style_4_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
 
   /* Configure containers. */
 
