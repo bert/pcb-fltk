@@ -443,7 +443,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_1_cb->callback ((Fl_Callback *) layer_1_cb_cb, this);
   _layer_1_cb->tooltip ("Toggle visibility");
   _layer_1_cb->set ();
-  _layer_1_lb->callback ((Fl_Callback *) layer_1_label_cb, this);
+  _layer_1_lb->callback ((Fl_Callback *) layer_1_change_cb, this);
   _layer_1_lb->tooltip ("Change layer properties");
   _layer_1_lb->box (FL_DOWN_BOX);
   _layer_1_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -454,7 +454,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_2_cb->callback ((Fl_Callback *) layer_2_cb_cb, this);
   _layer_2_cb->tooltip ("Toggle visibility");
   _layer_2_cb->set ();
-  _layer_2_lb->callback ((Fl_Callback *) layer_2_label_cb, this);
+  _layer_2_lb->callback ((Fl_Callback *) layer_2_change_cb, this);
   _layer_2_lb->tooltip ("Change layer properties");
   _layer_2_lb->box (FL_DOWN_BOX);
   _layer_2_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -465,7 +465,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_3_cb->callback ((Fl_Callback *) layer_3_cb_cb, this);
   _layer_3_cb->tooltip ("Toggle visibility");
   _layer_3_cb->set ();
-  _layer_3_lb->callback ((Fl_Callback *) layer_3_label_cb, this);
+  _layer_3_lb->callback ((Fl_Callback *) layer_3_change_cb, this);
   _layer_3_lb->tooltip ("Change layer properties");
   _layer_3_lb->box (FL_DOWN_BOX);
   _layer_3_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -476,7 +476,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_4_cb->callback ((Fl_Callback *) layer_4_cb_cb, this);
   _layer_4_cb->tooltip ("Toggle visibility");
   _layer_4_cb->set ();
-  _layer_4_lb->callback ((Fl_Callback *) layer_4_label_cb, this);
+  _layer_4_lb->callback ((Fl_Callback *) layer_4_change_cb, this);
   _layer_4_lb->tooltip ("Change layer properties");
   _layer_4_lb->box (FL_DOWN_BOX);
   _layer_4_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -487,7 +487,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_5_cb->callback ((Fl_Callback *) layer_5_cb_cb, this);
   _layer_5_cb->tooltip ("Toggle visibility");
   _layer_5_cb->set ();
-  _layer_5_lb->callback ((Fl_Callback *) layer_5_label_cb, this);
+  _layer_5_lb->callback ((Fl_Callback *) layer_5_change_cb, this);
   _layer_5_lb->tooltip ("Change layer properties");
   _layer_5_lb->box (FL_DOWN_BOX);
   _layer_5_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -498,7 +498,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_6_cb->callback ((Fl_Callback *) layer_6_cb_cb, this);
   _layer_6_cb->tooltip ("Toggle visibility");
   _layer_6_cb->set ();
-  _layer_6_lb->callback ((Fl_Callback *) layer_6_label_cb, this);
+  _layer_6_lb->callback ((Fl_Callback *) layer_6_change_cb, this);
   _layer_6_lb->tooltip ("Change layer properties");
   _layer_6_lb->box (FL_DOWN_BOX);
   _layer_6_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -509,7 +509,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_7_cb->callback ((Fl_Callback *) layer_7_cb_cb, this);
   _layer_7_cb->tooltip ("Toggle visibility");
   _layer_7_cb->set ();
-  _layer_7_lb->callback ((Fl_Callback *) layer_7_label_cb, this);
+  _layer_7_lb->callback ((Fl_Callback *) layer_7_change_cb, this);
   _layer_7_lb->tooltip ("Change layer properties");
   _layer_7_lb->box (FL_DOWN_BOX);
   _layer_7_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -520,7 +520,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_8_cb->callback ((Fl_Callback *) layer_8_cb_cb, this);
   _layer_8_cb->tooltip ("Toggle visibility");
   _layer_8_cb->set ();
-  _layer_8_lb->callback ((Fl_Callback *) layer_8_label_cb, this);
+  _layer_8_lb->callback ((Fl_Callback *) layer_8_change_cb, this);
   _layer_8_lb->tooltip ("Change layer properties");
   _layer_8_lb->box (FL_DOWN_BOX);
   _layer_8_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -531,7 +531,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_9_cb->callback ((Fl_Callback *) layer_9_cb_cb, this);
   _layer_9_cb->tooltip ("Toggle visibility");
   _layer_9_cb->set ();
-  _layer_9_lb->callback ((Fl_Callback *) layer_9_label_cb, this);
+  _layer_9_lb->callback ((Fl_Callback *) layer_9_change_cb, this);
   _layer_9_lb->tooltip ("Change layer properties");
   _layer_9_lb->box (FL_DOWN_BOX);
   _layer_9_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -542,7 +542,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_10_cb->callback ((Fl_Callback *) layer_10_cb_cb, this);
   _layer_10_cb->tooltip ("Toggle visibility");
   _layer_10_cb->set ();
-  _layer_10_lb->callback ((Fl_Callback *) layer_10_label_cb, this);
+  _layer_10_lb->callback ((Fl_Callback *) layer_10_change_cb, this);
   _layer_10_lb->tooltip ("Change layer properties");
   _layer_10_lb->box (FL_DOWN_BOX);
   _layer_10_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -553,7 +553,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_11_cb->callback ((Fl_Callback *) layer_11_cb_cb, this);
   _layer_11_cb->tooltip ("Toggle visibility");
   _layer_11_cb->set ();
-  _layer_11_lb->callback ((Fl_Callback *) layer_11_label_cb, this);
+  _layer_11_lb->callback ((Fl_Callback *) layer_11_change_cb, this);
   _layer_11_lb->tooltip ("Change layer properties");
   _layer_11_lb->box (FL_DOWN_BOX);
   _layer_11_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -564,7 +564,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_12_cb->callback ((Fl_Callback *) layer_12_cb_cb, this);
   _layer_12_cb->tooltip ("Toggle visibility");
   _layer_12_cb->set ();
-  _layer_12_lb->callback ((Fl_Callback *) layer_12_label_cb, this);
+  _layer_12_lb->callback ((Fl_Callback *) layer_12_change_cb, this);
   _layer_12_lb->tooltip ("Change layer properties");
   _layer_12_lb->box (FL_DOWN_BOX);
   _layer_12_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -575,7 +575,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_13_cb->callback ((Fl_Callback *) layer_13_cb_cb, this);
   _layer_13_cb->tooltip ("Toggle visibility");
   _layer_13_cb->set ();
-  _layer_13_lb->callback ((Fl_Callback *) layer_13_label_cb, this);
+  _layer_13_lb->callback ((Fl_Callback *) layer_13_change_cb, this);
   _layer_13_lb->tooltip ("Change layer properties");
   _layer_13_lb->box (FL_DOWN_BOX);
   _layer_13_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -585,7 +585,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _layer_14_rb->tooltip ("Set active layer");
   _layer_14_cb->callback ((Fl_Callback *) layer_14_cb_cb, this);
   _layer_14_cb->tooltip ("Toggle visibility");
-  _layer_14_lb->callback ((Fl_Callback *) layer_14_label_cb, this);
+  _layer_14_lb->callback ((Fl_Callback *) layer_14_change_cb, this);
   _layer_14_lb->tooltip ("Change layer properties");
   _layer_14_lb->box (FL_DOWN_BOX);
   _layer_14_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -1389,7 +1389,7 @@ Main_Window::layer_14_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_1_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_1_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1398,7 +1398,7 @@ Main_Window::layer_1_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_2_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_2_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1407,7 +1407,7 @@ Main_Window::layer_2_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_3_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_3_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1416,7 +1416,7 @@ Main_Window::layer_3_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_4_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_4_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1425,7 +1425,7 @@ Main_Window::layer_4_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_5_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_5_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1434,7 +1434,7 @@ Main_Window::layer_5_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_6_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_6_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1443,7 +1443,7 @@ Main_Window::layer_6_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_7_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_7_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1452,7 +1452,7 @@ Main_Window::layer_7_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_8_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_8_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1461,7 +1461,7 @@ Main_Window::layer_8_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_9_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_9_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1470,7 +1470,7 @@ Main_Window::layer_9_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_10_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_10_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1479,7 +1479,7 @@ Main_Window::layer_10_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_11_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_11_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1488,7 +1488,7 @@ Main_Window::layer_11_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_12_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_12_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1497,7 +1497,7 @@ Main_Window::layer_12_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_13_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_13_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1506,7 +1506,7 @@ Main_Window::layer_13_label_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_14_label_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_14_change_cb (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as

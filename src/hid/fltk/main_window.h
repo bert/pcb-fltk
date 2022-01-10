@@ -333,7 +333,7 @@ class Main_Window : public Fl_Overlay_Window
     static void layer_13_rb_cb (Fl_Widget *w, Main_Window *mw);
     static void layer_14_rb_cb (Fl_Widget *w, Main_Window *mw);
 
-    /* Layer dialog - layer toggle button callbacks. */
+    /* Layer dialog - layer check button callbacks. */
     static void layer_1_cb_cb (Fl_Widget *w, Main_Window *mw);
     static void layer_2_cb_cb (Fl_Widget *w, Main_Window *mw);
     static void layer_3_cb_cb (Fl_Widget *w, Main_Window *mw);
@@ -349,21 +349,21 @@ class Main_Window : public Fl_Overlay_Window
     static void layer_13_cb_cb (Fl_Widget *w, Main_Window *mw);
     static void layer_14_cb_cb (Fl_Widget *w, Main_Window *mw);
 
-    /* Layer dialog - label button callbacks. */
-    static void layer_1_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_2_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_3_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_4_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_5_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_6_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_7_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_8_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_9_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_10_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_11_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_12_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_13_label_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_14_label_cb (Fl_Widget *w, Main_Window *mw);
+    /* Layer dialog - layer change property button callbacks. */
+    static void layer_1_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_2_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_3_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_4_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_5_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_6_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_7_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_8_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_9_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_10_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_11_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_12_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_13_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_14_change_cb (Fl_Widget *w, Main_Window *mw);
 };
 
 
