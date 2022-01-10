@@ -364,6 +364,18 @@ class Main_Window : public Fl_Overlay_Window
     static void layer_12_change_cb (Fl_Widget *w, Main_Window *mw);
     static void layer_13_change_cb (Fl_Widget *w, Main_Window *mw);
     static void layer_14_change_cb (Fl_Widget *w, Main_Window *mw);
+
+    /* Route style dialog - radio button callbacks. */
+    static void route_style_1_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_2_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_3_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_4_rb_cb (Fl_Widget *w, Main_Window *mw);
+
+    /* Route style dialog - route style change property button callbacks. */
+    static void route_style_1_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_2_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_3_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_4_change_cb (Fl_Widget *w, Main_Window *mw);
 };
 
 

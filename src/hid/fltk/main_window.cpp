@@ -593,20 +593,31 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   _trackball->box (FL_DOWN_BOX);
 
+  _route_style_1_rb->callback ((Fl_Callback *) route_style_1_rb_cb, this);
   _route_style_1_rb->tooltip ("Set active route style");
   _route_style_1_rb->setonly ();
+  _route_style_1_lb->callback ((Fl_Callback *) route_style_1_change_cb, this);
   _route_style_1_lb->tooltip ("Change route style properties");
   _route_style_1_lb->box (FL_DOWN_BOX);
   _route_style_1_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+
+  _route_style_2_rb->callback ((Fl_Callback *) route_style_2_rb_cb, this);
   _route_style_2_rb->tooltip ("Set active route style");
+  _route_style_2_lb->callback ((Fl_Callback *) route_style_2_change_cb, this);
   _route_style_2_lb->tooltip ("Change route style properties");
   _route_style_2_lb->box (FL_DOWN_BOX);
   _route_style_2_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+
+  _route_style_3_rb->callback ((Fl_Callback *) route_style_3_rb_cb, this);
   _route_style_3_rb->tooltip ("Set active route style");
+  _route_style_3_lb->callback ((Fl_Callback *) route_style_3_change_cb, this);
   _route_style_3_lb->tooltip ("Change route style properties");
   _route_style_3_lb->box (FL_DOWN_BOX);
   _route_style_3_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+
+  _route_style_4_rb->callback ((Fl_Callback *) route_style_4_rb_cb, this);
   _route_style_4_rb->tooltip ("Set active route style");
+  _route_style_4_lb->callback ((Fl_Callback *) route_style_4_change_cb, this);
   _route_style_4_lb->tooltip ("Change route style properties");
   _route_style_4_lb->box (FL_DOWN_BOX);
   _route_style_4_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -1511,6 +1522,78 @@ Main_Window::layer_14_change_cb (Fl_Widget *, Main_Window *mw)
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
    * well. */
+}
+
+
+void
+Main_Window::route_style_1_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active route style name needs to be passed
+   * to the pcb data structs. */
+}
+
+
+void
+Main_Window::route_style_2_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active route style name needs to be passed
+   * to the pcb data structs. */
+}
+
+
+void
+Main_Window::route_style_3_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active route style name needs to be passed
+   * to the pcb data structs. */
+}
+
+
+void
+Main_Window::route_style_4_rb_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If toggled, the active route style name needs to be passed
+   * to the pcb data structs. */
+}
+
+
+void
+Main_Window::route_style_1_change_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the properties of the route
+   * style.
+   * The new route style properties need to be passed to the pcb data
+   * structs as well. */
+}
+
+
+void
+Main_Window::route_style_2_change_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the properties of the route
+   * style.
+   * The new route style properties need to be passed to the pcb data
+   * structs as well. */
+}
+
+
+void
+Main_Window::route_style_3_change_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the properties of the route
+   * style.
+   * The new route style properties need to be passed to the pcb data
+   * structs as well. */
+}
+
+
+void
+Main_Window::route_style_4_change_cb (Fl_Widget *, Main_Window *mw)
+{
+  /*! \todo If clicked, let the user alter the properties of the route
+   * style.
+   * The new route style properties need to be passed to the pcb data
+   * structs as well. */
 }
 
 
