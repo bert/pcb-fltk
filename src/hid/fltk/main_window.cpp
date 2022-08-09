@@ -640,12 +640,45 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
 /*!
  * \brief Destructor for the main window.
+ *
+ * Delete spawned children dialogs:
+ * - export dialog,
+ * - preference dialog,
+ * - object report dialog,
+ * - drill report dialog,
+ * - found pins/pads report dialog,
+ * - net length report dialog,
+ * - about dialog,
+ * - help dialog,
+ * - library dialog,
+ * - message log dialog,
+ * - DRC check dialog,
+ * - netlist dialog,
+ * - command entry dialog,
+ * - pinout dialog.
+ * 
+ * Delete main window children:
+ * - menu bar,
+ * - toolbar,
+ * - left group,
+ *   - layer group,
+ *   - trackball,
+ *   - route style group,
+ * - status bar,
+ * - command line entry dialog.
  */ 
 Main_Window::~Main_Window ()
 {
-  delete _help_dialog;
-  delete _menu_bar; /* Includes menu items. */
   delete _about_dialog;
+  delete _help_dialog;
+
+  delete _menu_bar; /* Includes menu items. */
+  delete _toolbar;
+  delete _left_group;
+  delete _layer_group;
+  delete _trackball;
+  delete _route_style_group;
+  delete _status_bar;
 }
 
 
