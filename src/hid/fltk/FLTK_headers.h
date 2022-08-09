@@ -60,6 +60,7 @@
 #include <FL/Fl_PNG_Image.H>
 #include <FL/Fl_Preferences.H>
 #include <FL/Fl_Radio_Round_Button.H>
+#include <FL/Fl_Text_Buffer.H>
 #include <FL/Fl_Toggle_Button.H>
 #include <FL/Fl_Tooltip.H>
 #include <FL/Fl_Widget.H>
