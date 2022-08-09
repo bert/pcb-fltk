@@ -144,25 +144,25 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   begin ();
 
   /* Initialize status bar. */
-  _status_bar = new Toolbar(wx, h-46, ww, 23);
-  wh -= _status_bar->h();
+  _status_bar = new Toolbar (wx, h-46, ww, 23);
+  wh -= _status_bar->h ();
   _view_side_label = new Label (0, 0, text_width ("View=top", 4), 21, "View=top");
-  new Spacer(0, 0, 2, 21);
+  new Spacer (0, 0, 2, 21);
   _grid_size_label = new Label (0, 0, text_width ("Grid=10.00 mil", 4), 21, "Grid=10.00 mil");
-  new Spacer(0, 0, 2, 21);
+  new Spacer (0, 0, 2, 21);
   _line_mode_label = new Label (0, 0, text_width ("Mode=45_/", 4), 21, "Mode=45_/");
-  new Spacer(0, 0, 2, 21);
+  new Spacer (0, 0, 2, 21);
   _line_thickness_label = new Label (0, 0, text_width ("Line=10.00 mil", 4), 21, "Line=10.00 mil");
-  new Spacer(0, 0, 2, 21);
+  new Spacer (0, 0, 2, 21);
   _via_thickness_label = new Label (0, 0, text_width ("Via=36.00 mil (20.00)", 4), 21, "Via=36.00 mil (20.00)");
-  new Spacer(0, 0, 2, 21);
+  new Spacer (0, 0, 2, 21);
   _clearance_label = new Label (0, 0, text_width ("Clearance=10.00 mil", 4), 21, "Clearance=10.00 mil");
-  new Spacer(0, 0, 2, 21);
+  new Spacer (0, 0, 2, 21);
   _text_size_label = new Label (0, 0, text_width ("Text=100 %", 4), 21, "Text=100 %");
-  new Spacer(0, 0, 2, 21);
+  new Spacer (0, 0, 2, 21);
   _buffer_nr_label = new Label (0, 0, text_width ("Buffer=#1", 4), 21, "Buffer=#1");
-  _status_bar->end();
-  begin();
+  _status_bar->end ();
+  begin ();
 
   /* Initialize the command line. */
   char *_command_line_entry_buffer = NULL;
