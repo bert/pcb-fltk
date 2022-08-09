@@ -841,6 +841,7 @@ void
 Main_Window::exit_cb (Fl_Widget *, Main_Window *mw)
 {
   Preferences::close ();
+  fprintf (stderr, "pcb-fltk says bye, bye.\n");
   exit (EXIT_SUCCESS);
 }
 
@@ -1064,6 +1065,9 @@ Main_Window::preferences_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::quit_cb (Fl_Widget *, Main_Window *mw)
 {
+  Preferences::close ();
+  fprintf (stderr, "pcb-fltk says I quit.\n");
+  exit (EXIT_SUCCESS);
 }
 
 
