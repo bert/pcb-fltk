@@ -884,6 +884,7 @@ Main_Window::full_screen_cb (Fl_Menu_ *m, Main_Window *mw)
 void
 Main_Window::dummy_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 /* File menu item callbacks. */
@@ -894,7 +895,7 @@ Main_Window::dummy_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::new_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -904,7 +905,7 @@ Main_Window::new_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::open_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -914,7 +915,7 @@ Main_Window::open_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::save_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -924,7 +925,7 @@ Main_Window::save_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::save_as_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -934,7 +935,7 @@ Main_Window::save_as_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::revert_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -945,7 +946,7 @@ Main_Window::revert_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::gschem_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -966,7 +967,7 @@ Main_Window::tinycad_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::load_element_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -976,7 +977,7 @@ Main_Window::load_element_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::load_layout_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
-/*! \todo Add code here. */
+  /*! \todo Add code here. */
 }
 
 
@@ -986,6 +987,7 @@ Main_Window::load_layout_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::load_netlist_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -995,6 +997,7 @@ Main_Window::load_netlist_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::load_vendor_resource_file_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1004,6 +1007,7 @@ Main_Window::load_vendor_resource_file_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::save_conn_data_1_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1013,6 +1017,7 @@ Main_Window::save_conn_data_1_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::save_conn_data_all_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1022,6 +1027,7 @@ Main_Window::save_conn_data_all_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::save_conn_data_u_pins_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1031,6 +1037,7 @@ Main_Window::save_conn_data_u_pins_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::export_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1040,6 +1047,7 @@ Main_Window::export_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::calibrate_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1049,6 +1057,7 @@ Main_Window::calibrate_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::print_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1058,6 +1067,7 @@ Main_Window::print_cb (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::preferences_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
@@ -1081,69 +1091,113 @@ Main_Window::quit_cb (Fl_Widget *, Main_Window *mw)
 /* Edit menu item callbacks. */
 
 
+/*!
+ * \brief Undo the last operation, or sequence of operations.
+ */
 void
 Main_Window::undo_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Redo the previous undone operation, or sequence of operations.
+ */
 void
 Main_Window::redo_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Clear the undo buffer.
+ */
 void
 Main_Window::clear_undo_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Cut selected objects to a buffer.
+ */
 void
 Main_Window::cut_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Copy selected objects to a buffer.
+ */
 void
 Main_Window::copy_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Paste objects from buffer to layout.
+ */
 void
 Main_Window::paste_from_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Unselect all selected objects.
+ */
 void
 Main_Window::unselect_all_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Select all visible objects.
+ */
 void
 Main_Window::select_all_visible_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Edit the contents of the selected text object in the layout.
+ */
 void
 Main_Window::edit_name_of_text_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Edit the name of the layout.
+ */
 void
 Main_Window::edit_name_of_layout_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Edit the name of the active layer.
+ */
 void
 Main_Window::edit_name_of_active_layer_cb (Fl_Widget *, Main_Window *mw)
 {
+  /*! \todo Add code here. */
 }
 
 
