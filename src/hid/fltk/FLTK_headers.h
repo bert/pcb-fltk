@@ -65,8 +65,10 @@
 #include <FL/Fl_Widget.H>
 #include <FL/Fl_Window.H>
 
+#include <FL/fl_ask.H>
 #include <FL/fl_draw.H>
 #include <FL/fl_message.H>
+#include <FL/fl_show_colormap.H>
 #include <FL/fl_types.h>
 #include <FL/fl_utf8.h>
 
