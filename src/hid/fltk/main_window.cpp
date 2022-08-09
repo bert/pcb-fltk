@@ -643,6 +643,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
  */ 
 Main_Window::~Main_Window ()
 {
+  delete _help_dialog;
   delete _menu_bar; /* Includes menu items. */
   delete _about_dialog;
 }
