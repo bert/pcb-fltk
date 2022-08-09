@@ -247,46 +247,46 @@ class Main_Window : public Fl_Overlay_Window
     /* Drag-and-drop. */
 
     /* Window callbacks. */
-    static void exit_cb (Fl_Widget *w, Main_Window *mw);
-    static void full_screen_cb (Fl_Menu_ *m, Main_Window *mw);
+    static void exit_CB (Fl_Widget *w, Main_Window *mw);
+    static void full_screen_CB (Fl_Menu_ *m, Main_Window *mw);
 
     /* Menu bar callbacks.*/
-    static void dummy_cb (Fl_Widget *w, Main_Window *mw);
+    static void dummy_CB (Fl_Widget *w, Main_Window *mw);
 
     /* File menu item callbacks. */
-    static void new_cb (Fl_Widget *w, Main_Window *mw);
-    static void open_cb (Fl_Widget *w, Main_Window *mw);
-    static void save_cb (Fl_Widget *w, Main_Window *mw);
-    static void save_as_cb (Fl_Widget *w, Main_Window *mw);
-    static void revert_cb (Fl_Widget *w, Main_Window *mw);
-    static void gschem_cb (Fl_Widget *w, Main_Window *mw);
-    static void tinycad_cb (Fl_Widget *w, Main_Window *mw);
-    static void load_element_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
-    static void load_layout_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
-    static void load_netlist_cb (Fl_Widget *w, Main_Window *mw);
-    static void load_vendor_resource_file_cb (Fl_Widget *w, Main_Window *mw);
-    static void save_conn_data_1_cb (Fl_Widget *w, Main_Window *mw);
-    static void save_conn_data_all_cb (Fl_Widget *w, Main_Window *mw);
-    static void save_conn_data_u_pins_cb (Fl_Widget *w, Main_Window *mw);
-    static void export_cb (Fl_Widget *w, Main_Window *mw);
-    static void calibrate_cb (Fl_Widget *w, Main_Window *mw);
-    static void print_cb (Fl_Widget *w, Main_Window *mw);
-    static void preferences_cb (Fl_Widget *w, Main_Window *mw);
-    static void quit_cb (Fl_Widget *w, Main_Window *mw);
+    static void new_CB (Fl_Widget *w, Main_Window *mw);
+    static void open_CB (Fl_Widget *w, Main_Window *mw);
+    static void save_CB (Fl_Widget *w, Main_Window *mw);
+    static void save_as_CB (Fl_Widget *w, Main_Window *mw);
+    static void revert_CB (Fl_Widget *w, Main_Window *mw);
+    static void gschem_CB (Fl_Widget *w, Main_Window *mw);
+    static void tinycad_CB (Fl_Widget *w, Main_Window *mw);
+    static void load_element_to_buffer_CB (Fl_Widget *w, Main_Window *mw);
+    static void load_layout_to_buffer_CB (Fl_Widget *w, Main_Window *mw);
+    static void load_netlist_CB (Fl_Widget *w, Main_Window *mw);
+    static void load_vendor_resource_file_CB (Fl_Widget *w, Main_Window *mw);
+    static void save_conn_data_1_CB (Fl_Widget *w, Main_Window *mw);
+    static void save_conn_data_all_CB (Fl_Widget *w, Main_Window *mw);
+    static void save_conn_data_u_pins_CB (Fl_Widget *w, Main_Window *mw);
+    static void export_CB (Fl_Widget *w, Main_Window *mw);
+    static void calibrate_CB (Fl_Widget *w, Main_Window *mw);
+    static void print_CB (Fl_Widget *w, Main_Window *mw);
+    static void preferences_CB (Fl_Widget *w, Main_Window *mw);
+    static void quit_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Edit menu item callbacks. */
 
-    static void undo_cb (Fl_Widget *w, Main_Window *mw);
-    static void redo_cb (Fl_Widget *w, Main_Window *mw);
-    static void clear_undo_buffer_cb (Fl_Widget *w, Main_Window *mw);
-    static void cut_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
-    static void copy_to_buffer_cb (Fl_Widget *w, Main_Window *mw);
-    static void paste_from_buffer_cb (Fl_Widget *w, Main_Window *mw);
-    static void unselect_all_cb (Fl_Widget *w, Main_Window *mw);
-    static void select_all_visible_cb (Fl_Widget *w, Main_Window *mw);
-    static void edit_name_of_text_cb (Fl_Widget *w, Main_Window *mw);
-    static void edit_name_of_layout_cb (Fl_Widget *w, Main_Window *mw);
-    static void edit_name_of_active_layer_cb (Fl_Widget *w, Main_Window *mw);
+    static void undo_CB (Fl_Widget *w, Main_Window *mw);
+    static void redo_CB (Fl_Widget *w, Main_Window *mw);
+    static void clear_undo_buffer_CB (Fl_Widget *w, Main_Window *mw);
+    static void cut_to_buffer_CB (Fl_Widget *w, Main_Window *mw);
+    static void copy_to_buffer_CB (Fl_Widget *w, Main_Window *mw);
+    static void paste_from_buffer_CB (Fl_Widget *w, Main_Window *mw);
+    static void unselect_all_CB (Fl_Widget *w, Main_Window *mw);
+    static void select_all_visible_CB (Fl_Widget *w, Main_Window *mw);
+    static void edit_name_of_text_CB (Fl_Widget *w, Main_Window *mw);
+    static void edit_name_of_layout_CB (Fl_Widget *w, Main_Window *mw);
+    static void edit_name_of_active_layer_CB (Fl_Widget *w, Main_Window *mw);
 
     /* View menu item callbacks. */
 
@@ -295,94 +295,94 @@ class Main_Window : public Fl_Overlay_Window
     /* Tools menu item callbacks. */
 
     /* Help menu item callbacks. */
-    static void help_cb (Fl_Widget *w, Main_Window *mw);
-    static void about_cb (Fl_Widget *w, Main_Window *mw);
+    static void help_CB (Fl_Widget *w, Main_Window *mw);
+    static void about_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Toolbar button callbacks. */
-    static void via_cb (Fl_Widget *w, Main_Window *mw);
-    static void line_cb (Fl_Widget *w, Main_Window *mw);
-    static void arc_cb (Fl_Widget *w, Main_Window *mw);
-    static void text_cb (Fl_Widget *w, Main_Window *mw);
-    static void rect_cb (Fl_Widget *w, Main_Window *mw);
-    static void poly_cb (Fl_Widget *w, Main_Window *mw);
-    static void polyhole_cb (Fl_Widget *w, Main_Window *mw);
-    static void buf_cb (Fl_Widget *w, Main_Window *mw);
-    static void del_cb (Fl_Widget *w, Main_Window *mw);
-    static void rot_cb (Fl_Widget *w, Main_Window *mw);
-    static void ins_cb (Fl_Widget *w, Main_Window *mw);
-    static void thrm_cb (Fl_Widget *w, Main_Window *mw);
-    static void sel_cb (Fl_Widget *w, Main_Window *mw);
-    static void lock_cb (Fl_Widget *w, Main_Window *mw);
-    static void pan_cb (Fl_Widget *w, Main_Window *mw);
+    static void via_CB (Fl_Widget *w, Main_Window *mw);
+    static void line_CB (Fl_Widget *w, Main_Window *mw);
+    static void arc_CB (Fl_Widget *w, Main_Window *mw);
+    static void text_CB (Fl_Widget *w, Main_Window *mw);
+    static void rect_CB (Fl_Widget *w, Main_Window *mw);
+    static void poly_CB (Fl_Widget *w, Main_Window *mw);
+    static void polyhole_CB (Fl_Widget *w, Main_Window *mw);
+    static void buf_CB (Fl_Widget *w, Main_Window *mw);
+    static void del_CB (Fl_Widget *w, Main_Window *mw);
+    static void rot_CB (Fl_Widget *w, Main_Window *mw);
+    static void ins_CB (Fl_Widget *w, Main_Window *mw);
+    static void thrm_CB (Fl_Widget *w, Main_Window *mw);
+    static void sel_CB (Fl_Widget *w, Main_Window *mw);
+    static void lock_CB (Fl_Widget *w, Main_Window *mw);
+    static void pan_CB (Fl_Widget *w, Main_Window *mw);
 
-    static void load_cb (Fl_Widget *w, Main_Window *mw);
-    static void reload_cb (Fl_Widget *w, Main_Window *mw);
+    static void load_CB (Fl_Widget *w, Main_Window *mw);
+    static void reload_CB (Fl_Widget *w, Main_Window *mw);
 
-    static void zoom_in_cb (Fl_Widget *w, Main_Window *mw);
-    static void zoom_out_cb (Fl_Widget *w, Main_Window *mw);
+    static void zoom_in_CB (Fl_Widget *w, Main_Window *mw);
+    static void zoom_out_CB (Fl_Widget *w, Main_Window *mw);
 
-    static void x_flip_cb (Fl_Widget *w, Main_Window *mw);
-    static void y_flip_cb (Fl_Widget *w, Main_Window *mw);
+    static void x_flip_CB (Fl_Widget *w, Main_Window *mw);
+    static void y_flip_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Layer dialog - radio button callbacks. */
-    static void layer_1_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_2_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_3_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_4_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_5_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_6_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_7_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_8_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_9_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_10_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_11_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_12_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_13_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_14_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_1_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_2_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_3_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_4_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_5_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_6_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_7_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_8_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_9_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_10_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_11_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_12_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_13_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_14_rb_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Layer dialog - layer check button callbacks. */
-    static void layer_1_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_2_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_3_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_4_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_5_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_6_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_7_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_8_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_9_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_10_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_11_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_12_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_13_cb_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_14_cb_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_1_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_2_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_3_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_4_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_5_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_6_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_7_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_8_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_9_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_10_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_11_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_12_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_13_cb_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_14_cb_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Layer dialog - layer change property button callbacks. */
-    static void layer_1_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_2_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_3_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_4_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_5_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_6_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_7_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_8_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_9_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_10_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_11_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_12_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_13_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void layer_14_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void layer_1_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_2_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_3_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_4_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_5_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_6_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_7_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_8_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_9_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_10_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_11_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_12_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_13_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void layer_14_change_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Route style dialog - radio button callbacks. */
-    static void route_style_1_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void route_style_2_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void route_style_3_rb_cb (Fl_Widget *w, Main_Window *mw);
-    static void route_style_4_rb_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_1_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void route_style_2_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void route_style_3_rb_CB (Fl_Widget *w, Main_Window *mw);
+    static void route_style_4_rb_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Route style dialog - route style change property button callbacks. */
-    static void route_style_1_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void route_style_2_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void route_style_3_change_cb (Fl_Widget *w, Main_Window *mw);
-    static void route_style_4_change_cb (Fl_Widget *w, Main_Window *mw);
+    static void route_style_1_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void route_style_2_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void route_style_3_change_CB (Fl_Widget *w, Main_Window *mw);
+    static void route_style_4_change_CB (Fl_Widget *w, Main_Window *mw);
 
     /* Command line entry callbacks. */
     static void command_line_entry_CB (Fl_Widget *w, Main_Window *mw);

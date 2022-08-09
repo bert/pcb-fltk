@@ -297,7 +297,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   box (OS_BG_BOX);
   size_range (1048, 840);
   resizable (_main_group);
-  callback ((Fl_Callback *) exit_cb, this);
+  callback ((Fl_Callback *) exit_CB, this);
   xclass (PROGRAM_NAME);
 
 
@@ -347,104 +347,104 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   /* Configure toolbar buttons. */
   _new_tb->tooltip ("New pcb layout (Ctrl+N)");
-  _new_tb->callback ((Fl_Callback *) new_cb, this);
+  _new_tb->callback ((Fl_Callback *) new_CB, this);
   _new_tb->image (NEW_ICON);
   _new_tb->take_focus ();
 
   _open_tb->tooltip ("Open pcb layout (Ctrl+O)");
-  _open_tb->callback ((Fl_Callback *) open_cb, this);
+  _open_tb->callback ((Fl_Callback *) open_CB, this);
   _open_tb->image (OPEN_ICON);
 
   _save_tb->tooltip ("Save pcb layout (Ctrl+S)");
-  _save_tb->callback ((Fl_Callback *) save_cb, this);
+  _save_tb->callback ((Fl_Callback *) save_CB, this);
   _save_tb->image (SAVE_ICON);
 
   _print_tb->tooltip ("Print pcb layout (Ctrl+P)");
-  _print_tb->callback ((Fl_Callback *) print_cb, this);
+  _print_tb->callback ((Fl_Callback *) print_CB, this);
   _print_tb->image (PRINT_ICON);
 
   _via_tb->tooltip ("Via tool");
-  _via_tb->callback ((Fl_Callback *) via_cb, this);
+  _via_tb->callback ((Fl_Callback *) via_CB, this);
   _via_tb->image (VIA_ICON);
 
   _line_tb->tooltip ("Line tool");
-  _line_tb->callback ((Fl_Callback *) line_cb, this);
+  _line_tb->callback ((Fl_Callback *) line_CB, this);
   _line_tb->image (LINE_ICON);
 
   _arc_tb->tooltip ("Arc tool");
-  _arc_tb->callback ((Fl_Callback *) arc_cb, this);
+  _arc_tb->callback ((Fl_Callback *) arc_CB, this);
   _arc_tb->image (ARC_ICON);
 
   _text_tb->tooltip ("Text tool");
-  _text_tb->callback ((Fl_Callback *) text_cb, this);
+  _text_tb->callback ((Fl_Callback *) text_CB, this);
   _text_tb->image (TEXT_ICON);
 
   _rect_tb->tooltip ("Rectangle tool");
-  _rect_tb->callback ((Fl_Callback *) rect_cb, this);
+  _rect_tb->callback ((Fl_Callback *) rect_CB, this);
   _rect_tb->image (RECT_ICON);
 
   _poly_tb->tooltip ("Polygon tool");
-  _poly_tb->callback ((Fl_Callback *) poly_cb, this);
+  _poly_tb->callback ((Fl_Callback *) poly_CB, this);
   _poly_tb->image (POLY_ICON);
 
   _polyhole_tb->tooltip ("Polygon hole tool");
-  _polyhole_tb->callback ((Fl_Callback *) polyhole_cb, this);
+  _polyhole_tb->callback ((Fl_Callback *) polyhole_CB, this);
   _polyhole_tb->image (POLYHOLE_ICON);
 
   _buf_tb->tooltip ("Buffer tool");
-  _buf_tb->callback ((Fl_Callback *) buf_cb, this);
+  _buf_tb->callback ((Fl_Callback *) buf_CB, this);
   _buf_tb->image (BUF_ICON);
 
   _del_tb->tooltip ("Delete tool");
-  _del_tb->callback ((Fl_Callback *) del_cb, this);
+  _del_tb->callback ((Fl_Callback *) del_CB, this);
   _del_tb->image (DEL_ICON);
 
   _rot_tb->tooltip ("Rotate tool");
-  _rot_tb->callback ((Fl_Callback *) rot_cb, this);
+  _rot_tb->callback ((Fl_Callback *) rot_CB, this);
   _rot_tb->image (ROT_ICON);
 
   _ins_tb->tooltip ("Insert tool");
-  _ins_tb->callback ((Fl_Callback *) ins_cb, this);
+  _ins_tb->callback ((Fl_Callback *) ins_CB, this);
   _ins_tb->image (INS_ICON);
 
   _thrm_tb->tooltip ("Thermal tool");
-  _thrm_tb->callback ((Fl_Callback *) thrm_cb, this);
+  _thrm_tb->callback ((Fl_Callback *) thrm_CB, this);
   _thrm_tb->image (THRM_ICON);
 
   _sel_tb->tooltip ("Selection tool");
-  _sel_tb->callback ((Fl_Callback *) sel_cb, this);
+  _sel_tb->callback ((Fl_Callback *) sel_CB, this);
   _sel_tb->image (SEL_ICON);
 
   _lock_tb->tooltip ("Lock tool");
-  _lock_tb->callback ((Fl_Callback *) lock_cb, this);
+  _lock_tb->callback ((Fl_Callback *) lock_CB, this);
   _lock_tb->image (LOCK_ICON);
 
   _pan_tb->tooltip ("Pan tool");
-  _pan_tb->callback ((Fl_Callback *) pan_cb, this);
+  _pan_tb->callback ((Fl_Callback *) pan_CB, this);
   _pan_tb->image (PAN_ICON);
 
   _load_tb->tooltip ("Load footprint");
-  _load_tb->callback ((Fl_Callback *) load_cb, this);
+  _load_tb->callback ((Fl_Callback *) load_CB, this);
   _load_tb->image (LOAD_ICON);
 
   _reload_tb->tooltip ("Reload pcb layout");
-  _reload_tb->callback ((Fl_Callback *) reload_cb, this);
+  _reload_tb->callback ((Fl_Callback *) reload_CB, this);
   _reload_tb->image (RELOAD_ICON);
 
   _zoom_in_tb->tooltip ("Zoom In (Ctrl+=)");
-  _zoom_in_tb->callback ((Fl_Callback *) zoom_in_cb, this);
+  _zoom_in_tb->callback ((Fl_Callback *) zoom_in_CB, this);
   _zoom_in_tb->image (ZOOM_IN_ICON);
 
   _zoom_out_tb->tooltip ("Zoom Out (Ctrl+-)");
-  _zoom_out_tb->callback ((Fl_Callback *) zoom_out_cb, this);
+  _zoom_out_tb->callback ((Fl_Callback *) zoom_out_CB, this);
   _zoom_out_tb->image (ZOOM_OUT_ICON);
 
   _x_flip_tb->tooltip ("X-flip (Shift+Tab)");
-  _x_flip_tb->callback ((Fl_Callback *) x_flip_cb, this);
+  _x_flip_tb->callback ((Fl_Callback *) x_flip_CB, this);
   _x_flip_tb->image (X_FLIP_ICON);
 
   _y_flip_tb->tooltip ("Y-flip (Tab)");
-  _y_flip_tb->callback ((Fl_Callback *) y_flip_cb, this);
+  _y_flip_tb->callback ((Fl_Callback *) y_flip_CB, this);
   _y_flip_tb->image (Y_FLIP_ICON);
 
   /* Configure left group. */
@@ -454,155 +454,155 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
    * This requires a proper implementation.
    */
 
-  _layer_1_rb->callback ((Fl_Callback *) layer_1_rb_cb, this);
+  _layer_1_rb->callback ((Fl_Callback *) layer_1_rb_CB, this);
   _layer_1_rb->tooltip ("Set active layer");
   _layer_1_rb->setonly ();
-  _layer_1_cb->callback ((Fl_Callback *) layer_1_cb_cb, this);
+  _layer_1_cb->callback ((Fl_Callback *) layer_1_cb_CB, this);
   _layer_1_cb->tooltip ("Toggle visibility");
   _layer_1_cb->set ();
-  _layer_1_lb->callback ((Fl_Callback *) layer_1_change_cb, this);
+  _layer_1_lb->callback ((Fl_Callback *) layer_1_change_CB, this);
   _layer_1_lb->tooltip ("Change layer properties");
   _layer_1_lb->box (FL_DOWN_BOX);
   _layer_1_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_1_lb->color (0x8B2323);
 
-  _layer_2_rb->callback ((Fl_Callback *) layer_2_rb_cb, this);
+  _layer_2_rb->callback ((Fl_Callback *) layer_2_rb_CB, this);
   _layer_2_rb->tooltip ("Set active layer");
-  _layer_2_cb->callback ((Fl_Callback *) layer_2_cb_cb, this);
+  _layer_2_cb->callback ((Fl_Callback *) layer_2_cb_CB, this);
   _layer_2_cb->tooltip ("Toggle visibility");
   _layer_2_cb->set ();
-  _layer_2_lb->callback ((Fl_Callback *) layer_2_change_cb, this);
+  _layer_2_lb->callback ((Fl_Callback *) layer_2_change_CB, this);
   _layer_2_lb->tooltip ("Change layer properties");
   _layer_2_lb->box (FL_DOWN_BOX);
   _layer_2_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_2_lb->color (0x3A5FCD);
 
-  _layer_3_rb->callback ((Fl_Callback *) layer_3_rb_cb, this);
+  _layer_3_rb->callback ((Fl_Callback *) layer_3_rb_CB, this);
   _layer_3_rb->tooltip ("Set active layer");
-  _layer_3_cb->callback ((Fl_Callback *) layer_3_cb_cb, this);
+  _layer_3_cb->callback ((Fl_Callback *) layer_3_cb_CB, this);
   _layer_3_cb->tooltip ("Toggle visibility");
   _layer_3_cb->set ();
-  _layer_3_lb->callback ((Fl_Callback *) layer_3_change_cb, this);
+  _layer_3_lb->callback ((Fl_Callback *) layer_3_change_CB, this);
   _layer_3_lb->tooltip ("Change layer properties");
   _layer_3_lb->box (FL_DOWN_BOX);
   _layer_3_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_3_lb->color (0x104E8B);
 
-  _layer_4_rb->callback ((Fl_Callback *) layer_4_rb_cb, this);
+  _layer_4_rb->callback ((Fl_Callback *) layer_4_rb_CB, this);
   _layer_4_rb->tooltip ("Set active layer");
-  _layer_4_cb->callback ((Fl_Callback *) layer_4_cb_cb, this);
+  _layer_4_cb->callback ((Fl_Callback *) layer_4_cb_CB, this);
   _layer_4_cb->tooltip ("Toggle visibility");
   _layer_4_cb->set ();
-  _layer_4_lb->callback ((Fl_Callback *) layer_4_change_cb, this);
+  _layer_4_lb->callback ((Fl_Callback *) layer_4_change_CB, this);
   _layer_4_lb->tooltip ("Change layer properties");
   _layer_4_lb->box (FL_DOWN_BOX);
   _layer_4_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_4_lb->color (0xCD3700);
 
-  _layer_5_rb->callback ((Fl_Callback *) layer_5_rb_cb, this);
+  _layer_5_rb->callback ((Fl_Callback *) layer_5_rb_CB, this);
   _layer_5_rb->tooltip ("Set active layer");
-  _layer_5_cb->callback ((Fl_Callback *) layer_5_cb_cb, this);
+  _layer_5_cb->callback ((Fl_Callback *) layer_5_cb_CB, this);
   _layer_5_cb->tooltip ("Toggle visibility");
   _layer_5_cb->set ();
-  _layer_5_lb->callback ((Fl_Callback *) layer_5_change_cb, this);
+  _layer_5_lb->callback ((Fl_Callback *) layer_5_change_CB, this);
   _layer_5_lb->tooltip ("Change layer properties");
   _layer_5_lb->box (FL_DOWN_BOX);
   _layer_5_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_5_lb->color (0x548B54);
 
-  _layer_6_rb->callback ((Fl_Callback *) layer_6_rb_cb, this);
+  _layer_6_rb->callback ((Fl_Callback *) layer_6_rb_CB, this);
   _layer_6_rb->tooltip ("Set active layer");
-  _layer_6_cb->callback ((Fl_Callback *) layer_6_cb_cb, this);
+  _layer_6_cb->callback ((Fl_Callback *) layer_6_cb_CB, this);
   _layer_6_cb->tooltip ("Toggle visibility");
   _layer_6_cb->set ();
-  _layer_6_lb->callback ((Fl_Callback *) layer_6_change_cb, this);
+  _layer_6_lb->callback ((Fl_Callback *) layer_6_change_CB, this);
   _layer_6_lb->tooltip ("Change layer properties");
   _layer_6_lb->box (FL_DOWN_BOX);
   _layer_6_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_6_lb->color (0x8B7355);
 
-  _layer_7_rb->callback ((Fl_Callback *) layer_7_rb_cb, this);
+  _layer_7_rb->callback ((Fl_Callback *) layer_7_rb_CB, this);
   _layer_7_rb->tooltip ("Set active layer");
-  _layer_7_cb->callback ((Fl_Callback *) layer_7_cb_cb, this);
+  _layer_7_cb->callback ((Fl_Callback *) layer_7_cb_CB, this);
   _layer_7_cb->tooltip ("Toggle visibility");
   _layer_7_cb->set ();
-  _layer_7_lb->callback ((Fl_Callback *) layer_7_change_cb, this);
+  _layer_7_lb->callback ((Fl_Callback *) layer_7_change_CB, this);
   _layer_7_lb->tooltip ("Change layer properties");
   _layer_7_lb->box (FL_DOWN_BOX);
   _layer_7_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_7_lb->color (0x00868B);
 
-  _layer_8_rb->callback ((Fl_Callback *) layer_8_rb_cb, this);
+  _layer_8_rb->callback ((Fl_Callback *) layer_8_rb_CB, this);
   _layer_8_rb->tooltip ("Set active layer");
-  _layer_8_cb->callback ((Fl_Callback *) layer_8_cb_cb, this);
+  _layer_8_cb->callback ((Fl_Callback *) layer_8_cb_CB, this);
   _layer_8_cb->tooltip ("Toggle visibility");
   _layer_8_cb->set ();
-  _layer_8_lb->callback ((Fl_Callback *) layer_8_change_cb, this);
+  _layer_8_lb->callback ((Fl_Callback *) layer_8_change_CB, this);
   _layer_8_lb->tooltip ("Change layer properties");
   _layer_8_lb->box (FL_DOWN_BOX);
   _layer_8_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_8_lb->color (0x228B22);
 
-  _layer_9_rb->callback ((Fl_Callback *) layer_9_rb_cb, this);
+  _layer_9_rb->callback ((Fl_Callback *) layer_9_rb_CB, this);
   _layer_9_rb->tooltip ("Set active layer");
-  _layer_9_cb->callback ((Fl_Callback *) layer_9_cb_cb, this);
+  _layer_9_cb->callback ((Fl_Callback *) layer_9_cb_CB, this);
   _layer_9_cb->tooltip ("Toggle visibility");
   _layer_9_cb->set ();
-  _layer_9_lb->callback ((Fl_Callback *) layer_9_change_cb, this);
+  _layer_9_lb->callback ((Fl_Callback *) layer_9_change_CB, this);
   _layer_9_lb->tooltip ("Change layer properties");
   _layer_9_lb->box (FL_DOWN_BOX);
   _layer_9_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_9_lb->color (0x8B2323);
 
-  _layer_10_rb->callback ((Fl_Callback *) layer_10_rb_cb, this);
+  _layer_10_rb->callback ((Fl_Callback *) layer_10_rb_CB, this);
   _layer_10_rb->tooltip ("Set active layer");
-  _layer_10_cb->callback ((Fl_Callback *) layer_10_cb_cb, this);
+  _layer_10_cb->callback ((Fl_Callback *) layer_10_cb_CB, this);
   _layer_10_cb->tooltip ("Toggle visibility");
   _layer_10_cb->set ();
-  _layer_10_lb->callback ((Fl_Callback *) layer_10_change_cb, this);
+  _layer_10_lb->callback ((Fl_Callback *) layer_10_change_CB, this);
   _layer_10_lb->tooltip ("Change layer properties");
   _layer_10_lb->box (FL_DOWN_BOX);
   _layer_10_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_10_lb->color (0x3A5FCD);
 
-  _layer_11_rb->callback ((Fl_Callback *) layer_11_rb_cb, this);
+  _layer_11_rb->callback ((Fl_Callback *) layer_11_rb_CB, this);
   _layer_11_rb->tooltip ("Set active layer");
-  _layer_11_cb->callback ((Fl_Callback *) layer_11_cb_cb, this);
+  _layer_11_cb->callback ((Fl_Callback *) layer_11_cb_CB, this);
   _layer_11_cb->tooltip ("Toggle visibility");
   _layer_11_cb->set ();
-  _layer_11_lb->callback ((Fl_Callback *) layer_11_change_cb, this);
+  _layer_11_lb->callback ((Fl_Callback *) layer_11_change_CB, this);
   _layer_11_lb->tooltip ("Change layer properties");
   _layer_11_lb->box (FL_DOWN_BOX);
   _layer_11_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_11_lb->color (0x104E8B);
 
-  _layer_12_rb->callback ((Fl_Callback *) layer_12_rb_cb, this);
+  _layer_12_rb->callback ((Fl_Callback *) layer_12_rb_CB, this);
   _layer_12_rb->tooltip ("Set active layer");
-  _layer_12_cb->callback ((Fl_Callback *) layer_12_cb_cb, this);
+  _layer_12_cb->callback ((Fl_Callback *) layer_12_cb_CB, this);
   _layer_12_cb->tooltip ("Toggle visibility");
   _layer_12_cb->set ();
-  _layer_12_lb->callback ((Fl_Callback *) layer_12_change_cb, this);
+  _layer_12_lb->callback ((Fl_Callback *) layer_12_change_CB, this);
   _layer_12_lb->tooltip ("Change layer properties");
   _layer_12_lb->box (FL_DOWN_BOX);
   _layer_12_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_12_lb->color (0xCD3700);
 
-  _layer_13_rb->callback ((Fl_Callback *) layer_13_rb_cb, this);
+  _layer_13_rb->callback ((Fl_Callback *) layer_13_rb_CB, this);
   _layer_13_rb->tooltip ("Set active layer");
-  _layer_13_cb->callback ((Fl_Callback *) layer_13_cb_cb, this);
+  _layer_13_cb->callback ((Fl_Callback *) layer_13_cb_CB, this);
   _layer_13_cb->tooltip ("Toggle visibility");
   _layer_13_cb->set ();
-  _layer_13_lb->callback ((Fl_Callback *) layer_13_change_cb, this);
+  _layer_13_lb->callback ((Fl_Callback *) layer_13_change_CB, this);
   _layer_13_lb->tooltip ("Change layer properties");
   _layer_13_lb->box (FL_DOWN_BOX);
   _layer_13_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
   _layer_13_lb->color (0x548B54);
 
-  _layer_14_rb->callback ((Fl_Callback *) layer_14_rb_cb, this);
+  _layer_14_rb->callback ((Fl_Callback *) layer_14_rb_CB, this);
   _layer_14_rb->tooltip ("Set active layer");
-  _layer_14_cb->callback ((Fl_Callback *) layer_14_cb_cb, this);
+  _layer_14_cb->callback ((Fl_Callback *) layer_14_cb_CB, this);
   _layer_14_cb->tooltip ("Toggle visibility");
-  _layer_14_lb->callback ((Fl_Callback *) layer_14_change_cb, this);
+  _layer_14_lb->callback ((Fl_Callback *) layer_14_change_CB, this);
   _layer_14_lb->tooltip ("Change layer properties");
   _layer_14_lb->box (FL_DOWN_BOX);
   _layer_14_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -610,31 +610,31 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   _trackball->box (FL_DOWN_BOX);
 
-  _route_style_1_rb->callback ((Fl_Callback *) route_style_1_rb_cb, this);
+  _route_style_1_rb->callback ((Fl_Callback *) route_style_1_rb_CB, this);
   _route_style_1_rb->tooltip ("Set active route style");
   _route_style_1_rb->setonly ();
-  _route_style_1_lb->callback ((Fl_Callback *) route_style_1_change_cb, this);
+  _route_style_1_lb->callback ((Fl_Callback *) route_style_1_change_CB, this);
   _route_style_1_lb->tooltip ("Change route style properties");
   _route_style_1_lb->box (FL_DOWN_BOX);
   _route_style_1_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
 
-  _route_style_2_rb->callback ((Fl_Callback *) route_style_2_rb_cb, this);
+  _route_style_2_rb->callback ((Fl_Callback *) route_style_2_rb_CB, this);
   _route_style_2_rb->tooltip ("Set active route style");
-  _route_style_2_lb->callback ((Fl_Callback *) route_style_2_change_cb, this);
+  _route_style_2_lb->callback ((Fl_Callback *) route_style_2_change_CB, this);
   _route_style_2_lb->tooltip ("Change route style properties");
   _route_style_2_lb->box (FL_DOWN_BOX);
   _route_style_2_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
 
-  _route_style_3_rb->callback ((Fl_Callback *) route_style_3_rb_cb, this);
+  _route_style_3_rb->callback ((Fl_Callback *) route_style_3_rb_CB, this);
   _route_style_3_rb->tooltip ("Set active route style");
-  _route_style_3_lb->callback ((Fl_Callback *) route_style_3_change_cb, this);
+  _route_style_3_lb->callback ((Fl_Callback *) route_style_3_change_CB, this);
   _route_style_3_lb->tooltip ("Change route style properties");
   _route_style_3_lb->box (FL_DOWN_BOX);
   _route_style_3_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
 
-  _route_style_4_rb->callback ((Fl_Callback *) route_style_4_rb_cb, this);
+  _route_style_4_rb->callback ((Fl_Callback *) route_style_4_rb_CB, this);
   _route_style_4_rb->tooltip ("Set active route style");
-  _route_style_4_lb->callback ((Fl_Callback *) route_style_4_change_cb, this);
+  _route_style_4_lb->callback ((Fl_Callback *) route_style_4_change_CB, this);
   _route_style_4_lb->tooltip ("Change route style properties");
   _route_style_4_lb->box (FL_DOWN_BOX);
   _route_style_4_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
@@ -896,7 +896,7 @@ Main_Window::handle (int event)
  * \todo Check for any unsaved work.
  */
 void
-Main_Window::exit_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::exit_CB (Fl_Widget *, Main_Window *mw)
 {
   Preferences::close ();
   fprintf (stderr, "pcb-fltk says bye, bye.\n");
@@ -910,7 +910,7 @@ Main_Window::exit_cb (Fl_Widget *, Main_Window *mw)
  * Make the main window occupy the whole screen.
  */
 void
-Main_Window::full_screen_cb (Fl_Menu_ *m, Main_Window *mw)
+Main_Window::full_screen_CB (Fl_Menu_ *m, Main_Window *mw)
 {
   if (m->mvalue ()->value ())
   {
@@ -933,7 +933,7 @@ Main_Window::full_screen_cb (Fl_Menu_ *m, Main_Window *mw)
  * It's just an endpoint doing nothing.
  */
 void
-Main_Window::dummy_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::dummy_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -944,7 +944,7 @@ Main_Window::dummy_cb (Fl_Widget *, Main_Window *mw)
  * \brief Start a new pcb layout.
  */
 void
-Main_Window::new_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::new_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -954,7 +954,7 @@ Main_Window::new_cb (Fl_Widget *, Main_Window *mw)
  * \brief Open an existing pcb layout.
  */
 void
-Main_Window::open_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::open_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -964,7 +964,7 @@ Main_Window::open_cb (Fl_Widget *, Main_Window *mw)
  * \brief Save a pcb layout.
  */
 void
-Main_Window::save_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::save_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -974,7 +974,7 @@ Main_Window::save_cb (Fl_Widget *, Main_Window *mw)
  * \brief Save a pcb layout with a different filename.
  */
 void
-Main_Window::save_as_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::save_as_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -984,7 +984,7 @@ Main_Window::save_as_cb (Fl_Widget *, Main_Window *mw)
  * \brief Revert the current pcb layout with the version on file.
  */
 void
-Main_Window::revert_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::revert_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -995,7 +995,7 @@ Main_Window::revert_cb (Fl_Widget *, Main_Window *mw)
  * file.
  */
 void
-Main_Window::gschem_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::gschem_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1006,7 +1006,7 @@ Main_Window::gschem_cb (Fl_Widget *, Main_Window *mw)
  * file.
  */
 void
-Main_Window::tinycad_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::tinycad_CB (Fl_Widget *, Main_Window *mw)
 {
 /*! \todo Add code here. */
 }
@@ -1016,7 +1016,7 @@ Main_Window::tinycad_cb (Fl_Widget *, Main_Window *mw)
  * \brief Load an existing element (footprint) from file into the buffer.
  */
 void
-Main_Window::load_element_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::load_element_to_buffer_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1026,7 +1026,7 @@ Main_Window::load_element_to_buffer_cb (Fl_Widget *, Main_Window *mw)
  * \brief Load an existing pcb layout from file into the buffer.
  */
 void
-Main_Window::load_layout_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::load_layout_to_buffer_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1036,7 +1036,7 @@ Main_Window::load_layout_to_buffer_cb (Fl_Widget *, Main_Window *mw)
  * \brief Load an external netlist from file.
  */
 void
-Main_Window::load_netlist_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::load_netlist_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1046,7 +1046,7 @@ Main_Window::load_netlist_cb (Fl_Widget *, Main_Window *mw)
  * \brief Load external vendor resource parameters from file.
  */
 void
-Main_Window::load_vendor_resource_file_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::load_vendor_resource_file_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1056,7 +1056,7 @@ Main_Window::load_vendor_resource_file_cb (Fl_Widget *, Main_Window *mw)
  * \brief Save connectivity data of a single element.
  */
 void
-Main_Window::save_conn_data_1_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::save_conn_data_1_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1066,7 +1066,7 @@ Main_Window::save_conn_data_1_cb (Fl_Widget *, Main_Window *mw)
  * \brief Save connectivity data of all elements.
  */
 void
-Main_Window::save_conn_data_all_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::save_conn_data_all_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1076,7 +1076,7 @@ Main_Window::save_conn_data_all_cb (Fl_Widget *, Main_Window *mw)
  * \brief Save connectivity data of unused pins.
  */
 void
-Main_Window::save_conn_data_u_pins_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::save_conn_data_u_pins_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1086,7 +1086,7 @@ Main_Window::save_conn_data_u_pins_cb (Fl_Widget *, Main_Window *mw)
  * \brief Open the export dialog window.
  */
 void
-Main_Window::export_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::export_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1096,7 +1096,7 @@ Main_Window::export_cb (Fl_Widget *, Main_Window *mw)
  * \brief Calibrate printer output.
  */
 void
-Main_Window::calibrate_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::calibrate_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1106,7 +1106,7 @@ Main_Window::calibrate_cb (Fl_Widget *, Main_Window *mw)
  * \brief Print to output device or file.
  */
 void
-Main_Window::print_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::print_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1116,7 +1116,7 @@ Main_Window::print_cb (Fl_Widget *, Main_Window *mw)
  * \brief Open the preferences dialog window.
  */
 void
-Main_Window::preferences_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::preferences_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1131,7 +1131,7 @@ Main_Window::preferences_cb (Fl_Widget *, Main_Window *mw)
  * \todo Check for any unsaved work.
  */
 void
-Main_Window::quit_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::quit_CB (Fl_Widget *, Main_Window *mw)
 {
   Preferences::close ();
   fprintf (stderr, "pcb-fltk says I quit.\n");
@@ -1146,7 +1146,7 @@ Main_Window::quit_cb (Fl_Widget *, Main_Window *mw)
  * \brief Undo the last operation, or sequence of operations.
  */
 void
-Main_Window::undo_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::undo_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1156,7 +1156,7 @@ Main_Window::undo_cb (Fl_Widget *, Main_Window *mw)
  * \brief Redo the previous undone operation, or sequence of operations.
  */
 void
-Main_Window::redo_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::redo_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1166,7 +1166,7 @@ Main_Window::redo_cb (Fl_Widget *, Main_Window *mw)
  * \brief Clear the undo buffer.
  */
 void
-Main_Window::clear_undo_buffer_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::clear_undo_buffer_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1176,7 +1176,7 @@ Main_Window::clear_undo_buffer_cb (Fl_Widget *, Main_Window *mw)
  * \brief Cut selected objects to a buffer.
  */
 void
-Main_Window::cut_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::cut_to_buffer_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1186,7 +1186,7 @@ Main_Window::cut_to_buffer_cb (Fl_Widget *, Main_Window *mw)
  * \brief Copy selected objects to a buffer.
  */
 void
-Main_Window::copy_to_buffer_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::copy_to_buffer_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1196,7 +1196,7 @@ Main_Window::copy_to_buffer_cb (Fl_Widget *, Main_Window *mw)
  * \brief Paste objects from buffer to layout.
  */
 void
-Main_Window::paste_from_buffer_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::paste_from_buffer_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1206,7 +1206,7 @@ Main_Window::paste_from_buffer_cb (Fl_Widget *, Main_Window *mw)
  * \brief Unselect all selected objects.
  */
 void
-Main_Window::unselect_all_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::unselect_all_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1216,7 +1216,7 @@ Main_Window::unselect_all_cb (Fl_Widget *, Main_Window *mw)
  * \brief Select all visible objects.
  */
 void
-Main_Window::select_all_visible_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::select_all_visible_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1226,7 +1226,7 @@ Main_Window::select_all_visible_cb (Fl_Widget *, Main_Window *mw)
  * \brief Edit the contents of the selected text object in the layout.
  */
 void
-Main_Window::edit_name_of_text_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::edit_name_of_text_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1236,7 +1236,7 @@ Main_Window::edit_name_of_text_cb (Fl_Widget *, Main_Window *mw)
  * \brief Edit the name of the layout.
  */
 void
-Main_Window::edit_name_of_layout_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::edit_name_of_layout_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1246,7 +1246,7 @@ Main_Window::edit_name_of_layout_cb (Fl_Widget *, Main_Window *mw)
  * \brief Edit the name of the active layer.
  */
 void
-Main_Window::edit_name_of_active_layer_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::edit_name_of_active_layer_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo Add code here. */
 }
@@ -1257,147 +1257,147 @@ Main_Window::edit_name_of_active_layer_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::via_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::via_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::line_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::line_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::arc_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::arc_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::text_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::text_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::rect_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::rect_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::poly_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::poly_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::polyhole_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::polyhole_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::buf_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::buf_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::del_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::del_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::rot_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::rot_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::ins_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::ins_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::thrm_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::thrm_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::sel_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::sel_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::lock_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::lock_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::pan_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::pan_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::load_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::load_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::reload_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::reload_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::zoom_in_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::zoom_in_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::zoom_out_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::zoom_out_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::x_flip_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::x_flip_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::y_flip_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::y_flip_CB (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
 void
-Main_Window::help_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::help_CB (Fl_Widget *, Main_Window *mw)
 {
   mw->_help_dialog->show (mw);
 }
 
 
 void
-Main_Window::about_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::about_CB (Fl_Widget *, Main_Window *mw)
 {
 //  mw->_about_dialog->show (mw);
 }
 
 
 void
-Main_Window::layer_1_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_1_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1405,7 +1405,7 @@ Main_Window::layer_1_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_2_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_2_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1413,7 +1413,7 @@ Main_Window::layer_2_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_3_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_3_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1421,7 +1421,7 @@ Main_Window::layer_3_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_4_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_4_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1429,7 +1429,7 @@ Main_Window::layer_4_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_5_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_5_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1437,7 +1437,7 @@ Main_Window::layer_5_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_6_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_6_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1445,7 +1445,7 @@ Main_Window::layer_6_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_7_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_7_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1453,7 +1453,7 @@ Main_Window::layer_7_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_8_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_8_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1461,7 +1461,7 @@ Main_Window::layer_8_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_9_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_9_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1469,7 +1469,7 @@ Main_Window::layer_9_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_10_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_10_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1477,7 +1477,7 @@ Main_Window::layer_10_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_11_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_11_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1485,7 +1485,7 @@ Main_Window::layer_11_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_12_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_12_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1493,7 +1493,7 @@ Main_Window::layer_12_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_13_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_13_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1501,7 +1501,7 @@ Main_Window::layer_13_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_14_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_14_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active layer name needs to be passed to the
    * pcb data structs. */
@@ -1509,7 +1509,7 @@ Main_Window::layer_14_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_1_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_1_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1518,7 +1518,7 @@ Main_Window::layer_1_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_2_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_2_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1527,7 +1527,7 @@ Main_Window::layer_2_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_3_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_3_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1536,7 +1536,7 @@ Main_Window::layer_3_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_4_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_4_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1545,7 +1545,7 @@ Main_Window::layer_4_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_5_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_5_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1554,7 +1554,7 @@ Main_Window::layer_5_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_6_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_6_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1563,7 +1563,7 @@ Main_Window::layer_6_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_7_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_7_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1572,7 +1572,7 @@ Main_Window::layer_7_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_8_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_8_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1581,7 +1581,7 @@ Main_Window::layer_8_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_9_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_9_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1590,7 +1590,7 @@ Main_Window::layer_9_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_10_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_10_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1599,7 +1599,7 @@ Main_Window::layer_10_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_11_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_11_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1608,7 +1608,7 @@ Main_Window::layer_11_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_12_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_12_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1617,7 +1617,7 @@ Main_Window::layer_12_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_13_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_13_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1626,7 +1626,7 @@ Main_Window::layer_13_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_14_cb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_14_cb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, update the icon.
    * The layer state (on/off) needs to be passed to the pcb data structs
@@ -1635,7 +1635,7 @@ Main_Window::layer_14_cb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_1_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_1_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1644,7 +1644,7 @@ Main_Window::layer_1_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_2_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_2_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1653,7 +1653,7 @@ Main_Window::layer_2_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_3_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_3_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1662,7 +1662,7 @@ Main_Window::layer_3_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_4_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_4_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1671,7 +1671,7 @@ Main_Window::layer_4_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_5_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_5_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1680,7 +1680,7 @@ Main_Window::layer_5_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_6_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_6_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1689,7 +1689,7 @@ Main_Window::layer_6_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_7_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_7_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1698,7 +1698,7 @@ Main_Window::layer_7_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_8_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_8_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1707,7 +1707,7 @@ Main_Window::layer_8_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_9_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_9_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1716,7 +1716,7 @@ Main_Window::layer_9_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_10_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_10_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1725,7 +1725,7 @@ Main_Window::layer_10_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_11_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_11_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1734,7 +1734,7 @@ Main_Window::layer_11_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_12_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_12_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1743,7 +1743,7 @@ Main_Window::layer_12_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_13_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_13_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1752,7 +1752,7 @@ Main_Window::layer_13_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::layer_14_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::layer_14_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the name of the layer.
    * The new layer name needs to be passed to the pcb data structs as
@@ -1761,7 +1761,7 @@ Main_Window::layer_14_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_1_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_1_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active route style name needs to be passed
    * to the pcb data structs. */
@@ -1769,7 +1769,7 @@ Main_Window::route_style_1_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_2_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_2_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active route style name needs to be passed
    * to the pcb data structs. */
@@ -1777,7 +1777,7 @@ Main_Window::route_style_2_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_3_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_3_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active route style name needs to be passed
    * to the pcb data structs. */
@@ -1785,7 +1785,7 @@ Main_Window::route_style_3_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_4_rb_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_4_rb_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If toggled, the active route style name needs to be passed
    * to the pcb data structs. */
@@ -1793,7 +1793,7 @@ Main_Window::route_style_4_rb_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_1_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_1_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the properties of the route
    * style.
@@ -1803,7 +1803,7 @@ Main_Window::route_style_1_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_2_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_2_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the properties of the route
    * style.
@@ -1813,7 +1813,7 @@ Main_Window::route_style_2_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_3_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_3_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the properties of the route
    * style.
@@ -1823,7 +1823,7 @@ Main_Window::route_style_3_change_cb (Fl_Widget *, Main_Window *mw)
 
 
 void
-Main_Window::route_style_4_change_cb (Fl_Widget *, Main_Window *mw)
+Main_Window::route_style_4_change_CB (Fl_Widget *, Main_Window *mw)
 {
   /*! \todo If clicked, let the user alter the properties of the route
    * style.
