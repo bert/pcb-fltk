@@ -795,7 +795,14 @@ Main_Window::apply_transparency ()
 #else
   Atom atom = XInternAtom (fl_display, "_NET_WM_WINDOW_OPACITY", False);
   uint32_t opacity = (uint32_t) (UINT32_MAX * alpha);
-  XChangeProperty (fl_display, fl_xid (this), atom, XA_CARDINAL, 32, PropModeReplace, (unsigned char *) &opacity, 1);
+  XChangeProperty (fl_display,
+                   fl_xid (this),
+                   atom,
+                   XA_CARDINAL,
+                   32,
+                   PropModeReplace,
+                   (unsigned char *) &opacity,
+                   1);
 #endif
 }
 
