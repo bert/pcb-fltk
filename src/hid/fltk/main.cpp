@@ -47,6 +47,7 @@
 #pragma warning (pop)
 
 
+#include "event_handlers.h"
 #include "version.h"
 #include "preferences.h"
 #include "themes.h"
@@ -118,6 +119,7 @@ main (int argc, char **argv)
 
   Main_Window window (x, y, w, h);
   window.show ();
+//  Fl::add_handler (escape_handler);
 
   if (window.transparent ())
   {
