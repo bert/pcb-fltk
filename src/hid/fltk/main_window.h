@@ -63,6 +63,8 @@
 #define OS_TAB_HEIGHT 20
 #endif
 
+#define MAX_COMMAND_LINE_ENTRY_LENGTH 255	/* Maximum command line entry length. */
+
 
 class Main_Window : public Fl_Overlay_Window
 {

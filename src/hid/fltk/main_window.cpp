@@ -165,14 +165,14 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   begin();
 
   /* Initialize the command line. */
-  char *_command_line_entry_buffer;
+  char *_command_line_entry_buffer = NULL;
   char *_command_line_label_text = strdup ("Command Entry:");
 
   _command_line = new Toolbar (wx, h-23, ww, 23);
   wh -= _command_line->h ();
   _command_line_label = new Label (0, 0, text_width (_command_line_label_text, 4), 21, _command_line_label_text);
   new Spacer(0, 0, 2, 21);
-  _command_line_entry = new Fl_Input (0, 0, (ww - text_width (_command_line_label_text, 4) - 2), 21, _command_line_entry_buffer = NULL);
+  _command_line_entry = new Fl_Input (0, 0, (MAX_COMMAND_LINE_ENTRY_LENGTH * text_width ("W")), 21, _command_line_entry_buffer);
   _command_line->end ();
   begin ();
 
