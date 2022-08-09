@@ -68,6 +68,9 @@
 #pragma warning (disable : 4458)
 
 
+/*!
+ * \brief Constructor for the main window.
+ */ 
 Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay_Window (x, y, w, h, PROGRAM_NAME), _wx (x), _wy (y), _ww (w), _wh (h)
 {
   int transparent = Preferences::get ("transparent", 0);
@@ -434,8 +437,10 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   /* Configure left group. */
 
-  /*! todo This is a mock up (kludge) of the left group - layer dialog.
-   * This requires a proper implementation. */
+  /*!
+   * \todo This is a mock up (kludge) of the left group - layer dialog.
+   * This requires a proper implementation.
+   */
 
   _layer_1_rb->callback ((Fl_Callback *) layer_1_rb_cb, this);
   _layer_1_rb->tooltip ("Set active layer");
@@ -632,12 +637,20 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
 }
 
+
+/*!
+ * \brief Destructor for the main window.
+ */ 
 Main_Window::~Main_Window ()
 {
   delete _menu_bar; /* Includes menu items. */
   delete _about_dialog;
 }
 
+
+/*!
+ * \brief Show the main window.
+ */ 
 void
 Main_Window::show ()
 {
@@ -674,6 +687,9 @@ Main_Window::show ()
 }
 
 
+/*!
+ * \brief Test if the main window is maximized.
+ */
 bool
 Main_Window::maximized () const
 {
@@ -735,6 +751,9 @@ Main_Window::maximized () const
 }
 
 
+/*!
+ * \brief Maximize the main window.
+ */
 void
 Main_Window::maximize ()
 {
@@ -756,6 +775,9 @@ Main_Window::maximize ()
 }
 
 
+/*!
+ * \brief Apply transparency.
+ */
 void
 Main_Window::apply_transparency ()
 {
@@ -777,10 +799,19 @@ Main_Window::apply_transparency ()
 #endif
 }
 
+
+/*!
+ * \brief Draw overlay.
+ */
 void Main_Window::draw_overlay ()
 {
+ /*! \todo Add code here. */
 }
 
+
+/*!
+ * \brief Window state handler.
+ */
 int
 Main_Window::handle (int event)
 {
@@ -798,6 +829,14 @@ Main_Window::handle (int event)
 }
 
 
+/*!
+ * \brief Exit callback.
+ *
+ * - Close any open preferences file.
+ * - Display a sign off message on stderr.
+ *
+ * \todo Check for any unsaved work.
+ */
 void
 Main_Window::exit_cb (Fl_Widget *, Main_Window *mw)
 {
@@ -806,6 +845,11 @@ Main_Window::exit_cb (Fl_Widget *, Main_Window *mw)
 }
 
 
+/*!
+ * \brief Full screen callback.
+ *
+ * Make the main window occupy the whole screen.
+ */
 void
 Main_Window::full_screen_cb (Fl_Menu_ *m, Main_Window *mw)
 {
@@ -825,7 +869,9 @@ Main_Window::full_screen_cb (Fl_Menu_ *m, Main_Window *mw)
 
 
 /*!
- * \todo Remove me when it is time to do so.
+ * \brief Remove me when it is time to do so.
+ *
+ * It's just an endpoint doing nothing.
  */
 void
 Main_Window::dummy_cb (Fl_Widget *, Main_Window *mw)
@@ -834,114 +880,187 @@ Main_Window::dummy_cb (Fl_Widget *, Main_Window *mw)
 
 /* File menu item callbacks. */
 
+/*!
+ * \brief Start a new pcb layout.
+ */
 void
 Main_Window::new_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Open an existing pcb layout.
+ */
 void
 Main_Window::open_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Save a pcb layout.
+ */
 void
 Main_Window::save_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Save a pcb layout with a different filename.
+ */
 void
 Main_Window::save_as_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Revert the current pcb layout with the version on file.
+ */
 void
 Main_Window::revert_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Create and load a netlist from an existing gschem schematic
+ * file.
+ */
 void
 Main_Window::gschem_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Create and load a netlist from an existing TinyCAD schematic
+ * file.
+ */
 void
 Main_Window::tinycad_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Load an existing element (footprint) from file into the buffer.
+ */
 void
 Main_Window::load_element_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Load an existing pcb layout from file into the buffer.
+ */
 void
 Main_Window::load_layout_to_buffer_cb (Fl_Widget *, Main_Window *mw)
 {
+/*! \todo Add code here. */
 }
 
 
+/*!
+ * \brief Load an external netlist from file.
+ */
 void
 Main_Window::load_netlist_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Load external vendor resource parameters from file.
+ */
 void
 Main_Window::load_vendor_resource_file_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Save connectivity data of a single element.
+ */
 void
 Main_Window::save_conn_data_1_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Save connectivity data of all elements.
+ */
 void
 Main_Window::save_conn_data_all_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Save connectivity data of unused pins.
+ */
 void
 Main_Window::save_conn_data_u_pins_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Open the export dialog window.
+ */
 void
 Main_Window::export_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Calibrate printer output.
+ */
 void
 Main_Window::calibrate_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Print to output device or file.
+ */
 void
 Main_Window::print_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Open the preferences dialog window.
+ */
 void
 Main_Window::preferences_cb (Fl_Widget *, Main_Window *mw)
 {
 }
 
 
+/*!
+ * \brief Quit the application.
+ *
+ * - Close any open preferences file.
+ * - Display a sign off message on stderr.
+ *
+ * \todo Check for any unsaved work.
+ */
 void
 Main_Window::quit_cb (Fl_Widget *, Main_Window *mw)
 {
