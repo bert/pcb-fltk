@@ -144,7 +144,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   begin ();
 
   /* Initialize status bar. */
-  _status_bar = new Toolbar(wx, h-23, ww, 23);
+  _status_bar = new Toolbar(wx, h-46, ww, 23);
   wh -= _status_bar->h();
   _view_side_label = new Label (0, 0, text_width ("View=top", 4), 21, "View=top");
   new Spacer(0, 0, 2, 21);
@@ -163,6 +163,18 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _buffer_nr_label = new Label (0, 0, text_width ("Buffer=#1", 4), 21, "Buffer=#1");
   _status_bar->end();
   begin();
+
+  /* Initialize the command line. */
+  char *_command_line_entry_buffer;
+  char *_command_line_label_text = strdup ("Command Entry:");
+
+  _command_line = new Toolbar (wx, h-23, ww, 23);
+  wh -= _command_line->h ();
+  _command_line_label = new Label (0, 0, text_width (_command_line_label_text, 4), 21, _command_line_label_text);
+  new Spacer(0, 0, 2, 21);
+  _command_line_entry = new Fl_Input (0, 0, (ww - text_width (_command_line_label_text, 4) - 2), 21, _command_line_entry_buffer = NULL);
+  _command_line->end ();
+  begin ();
 
   /* Main group. */
   int wgt_h = 22;
@@ -283,7 +295,7 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
 
   /* Configure window. */
   box (OS_BG_BOX);
-  size_range (647, 406);
+  size_range (1048, 840);
   resizable (_main_group);
   callback ((Fl_Callback *) exit_cb, this);
   xclass (PROGRAM_NAME);
@@ -626,6 +638,11 @@ Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay
   _route_style_4_lb->tooltip ("Change route style properties");
   _route_style_4_lb->box (FL_DOWN_BOX);
   _route_style_4_lb->align (FL_ALIGN_LEFT | FL_ALIGN_INSIDE);
+
+  /* Configure command line. */
+  _command_line_entry->tooltip ("Type a command and Enter key");
+  _command_line_entry->when (FL_WHEN_ENTER_KEY_ALWAYS);
+  _command_line_entry->callback ((Fl_Callback *) command_line_entry_CB, this);
 
   /* Configure containers. */
 
@@ -1812,6 +1829,23 @@ Main_Window::route_style_4_change_cb (Fl_Widget *, Main_Window *mw)
    * style.
    * The new route style properties need to be passed to the pcb data
    * structs as well. */
+}
+
+/*!
+ * \brief A text is entered in the command line entry widget and the
+ * Enter key is pressed.
+ */
+void
+Main_Window::command_line_entry_CB (Fl_Widget *w, Main_Window *mw)
+{
+  Fl_Input *tinput = (Fl_Input *) w;
+
+  fprintf (stderr, tinput->value (), "%s");
+  fprintf (stderr, "\n");
+
+  /*! \todo Add code here. */
+
+  tinput->value ("");
 }
 
 

@@ -70,12 +70,17 @@ class Main_Window : public Fl_Overlay_Window
     /* GUI containers. */
     Fl_Menu_Bar *_menu_bar;
     Toolbar *_toolbar;
+
     Fl_Group *_main_group;
     Fl_Group *_left_group;
     Fl_Group *_layer_group;
     Fl_Group *_route_style_group;
 
     Toolbar *_status_bar;
+
+    Toolbar *_command_line;
+    Label *_command_line_label;
+    Fl_Input *_command_line_entry;
 
     /* GUI inputs. */
     Fl_Menu_Item *_transparent_mi = NULL;
@@ -376,6 +381,9 @@ class Main_Window : public Fl_Overlay_Window
     static void route_style_2_change_cb (Fl_Widget *w, Main_Window *mw);
     static void route_style_3_change_cb (Fl_Widget *w, Main_Window *mw);
     static void route_style_4_change_cb (Fl_Widget *w, Main_Window *mw);
+
+    /* Command line entry callbacks. */
+    static void command_line_entry_CB (Fl_Widget *w, Main_Window *mw);
 };
 
 
