@@ -898,9 +898,12 @@ Main_Window::handle (int event)
 void
 Main_Window::exit_CB (Fl_Widget *, Main_Window *mw)
 {
-  Preferences::close ();
-  fprintf (stderr, "pcb-fltk says bye, bye.\n");
-  exit (EXIT_SUCCESS);
+  if (fl_choice ("Are you really absolutely positively certain you want to exit?", "continue", "quit", NULL))
+  {
+    Preferences::close ();
+    fprintf (stderr, "pcb-fltk says bye, exitting.\n");
+    exit (EXIT_SUCCESS);
+  }
 }
 
 
@@ -1133,9 +1136,12 @@ Main_Window::preferences_CB (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::quit_CB (Fl_Widget *, Main_Window *mw)
 {
-  Preferences::close ();
-  fprintf (stderr, "pcb-fltk says I quit.\n");
-  exit (EXIT_SUCCESS);
+  if (fl_choice ("Are you really absolutely positively certain you want to quit?", "continue", "quit", NULL))
+  {
+    Preferences::close ();
+    fprintf (stderr, "pcb-fltk says bye, quitting.\n");
+    exit (EXIT_SUCCESS);
+  }
 }
 
 
