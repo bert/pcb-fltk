@@ -3,7 +3,7 @@
  *
  * \author Bert Timmerman <bert.timmerman@xs4all.nl>
  *
- * \copyright (C) 2021 PCB Contributors.
+ * \copyright (C) 2021, 2022 PCB Contributors.
  *
  * <hr>
  *
@@ -233,5 +233,5 @@ Toolbar_Toggle_Button::Toolbar_Toggle_Button (int x, int y, int w, int h, const 
 
 Toolbar_Radio_Button::Toolbar_Radio_Button (int x, int y, int w, int h, const char *l) : Toolbar_Button(x, y, w, h, l)
 {
-  type(FL_RADIO_BUTTON);
+  type (FL_RADIO_BUTTON);
 }
