@@ -960,7 +960,7 @@ void
 Main_Window::open_CB (Fl_Widget *, Main_Window *mw)
 {
   Fl_Native_File_Chooser fnfc;
-  fnfc.title ("Pick a file");
+  fnfc.title ("Open a file");
   fnfc.type (Fl_Native_File_Chooser::BROWSE_FILE);
   fnfc.filter ("*.{pcb,fp}"); /* Add a filter for pcb and fp suffixes. */
   fnfc.directory ("."); /* The default directory to use. */
