@@ -1006,7 +1006,35 @@ Main_Window::save_CB (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::save_as_CB (Fl_Widget *, Main_Window *mw)
 {
-  /*! \todo Add code here. */
+  Fl_Native_File_Chooser fnfc;
+  fnfc.title ("Save a file as ...");
+  fnfc.type (Fl_Native_File_Chooser::BROWSE_SAVE_FILE);
+  fnfc.options (Fl_Native_File_Chooser::SAVEAS_CONFIRM);
+  fnfc.filter ("*.{pcb,fp}"); /* Add a filter for pcb and fp suffixes. */
+  fnfc.directory ("."); /* The default directory to use. */
+  /* Show native file chooser. */
+  switch (fnfc.show ())
+  {
+    case -1: /* An error occured. */
+      fprintf (stderr, "ERROR: %s\n", fnfc.errmsg ());
+      break;
+
+    case 1: /* The [CANCEL] button was clicked, or the dialog was closed by clickin the top right [x]. */
+#if DEBUG
+      fprintf (stderr, "The file chooser was cancelled.\n");
+#endif
+      break;
+
+    default: /* A file was chosen. */
+#if DEBUG
+      fprintf (stderr, "The file chooser picked: %s\n", fnfc.filename ());
+#endif
+  /*! \todo Add code to:
+   * - Return the chosen filename to the pcb engine.
+   * - Clean up the obsolete file chooser object.
+   */
+      break;
+  }
 }
 
 
