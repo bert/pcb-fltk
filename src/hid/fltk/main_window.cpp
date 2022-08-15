@@ -981,7 +981,10 @@ Main_Window::open_CB (Fl_Widget *, Main_Window *mw)
 #if DEBUG
       fprintf (stderr, "The file chooser picked: %s\n", fnfc.filename ());
 #endif
-  /*! \todo Add code here to return the chosen filename. */
+  /*! \todo Add code to:
+   * - Return the chosen filename to the pcb engine.
+   * - Clean up the obsolete file chooser object.
+   */
       break;
   }
 }
