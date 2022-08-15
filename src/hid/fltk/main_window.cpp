@@ -1009,7 +1009,7 @@ Main_Window::save_as_CB (Fl_Widget *, Main_Window *mw)
   Fl_Native_File_Chooser fnfc;
   fnfc.title ("Save a file as ...");
   fnfc.type (Fl_Native_File_Chooser::BROWSE_SAVE_FILE);
-  fnfc.options (Fl_Native_File_Chooser::SAVEAS_CONFIRM);
+  fnfc.options (Fl_Native_File_Chooser::SAVEAS_CONFIRM | Fl_Native_File_Chooser::NEW_FOLDER | Fl_Native_File_Chooser::PREVIEW);
   fnfc.filter ("*.{pcb,fp}"); /* Add a filter for pcb and fp suffixes. */
   fnfc.directory ("."); /* The default directory to use. */
   /* Show native file chooser. */
