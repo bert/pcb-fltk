@@ -959,7 +959,31 @@ Main_Window::new_CB (Fl_Widget *, Main_Window *mw)
 void
 Main_Window::open_CB (Fl_Widget *, Main_Window *mw)
 {
-  /*! \todo Add code here. */
+  Fl_Native_File_Chooser fnfc;
+  fnfc.title ("Pick a file");
+  fnfc.type (Fl_Native_File_Chooser::BROWSE_FILE);
+  fnfc.filter ("*.{pcb,fp}"); /* Add a filter for pcb and fp suffixes. */
+  fnfc.directory ("."); /* The default directory to use. */
+  /* Show native file chooser. */
+  switch (fnfc.show ())
+  {
+    case -1: /* An error occured. */
+      fprintf (stderr, "ERROR: %s\n", fnfc.errmsg ());
+      break;
+
+    case 1: /* The [CANCEL] button was clicked, or the dialog was closed by clickin the top right [x]. */
+#if DEBUG
+      fprintf (stderr, "The file chooser was cancelled.\n");
+#endif
+      break;
+
+    default: /* A file was chosen. */
+#if DEBUG
+      fprintf (stderr, "The file chooser picked: %s\n", fnfc.filename ());
+#endif
+  /*! \todo Add code here to return the chosen filename. */
+      break;
+  }
 }
 
 
