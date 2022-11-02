@@ -247,6 +247,7 @@ class Main_Window : public Fl_Overlay_Window
     /* Drag-and-drop. */
 
     /* Window callbacks. */
+    static void set_window_title (bool pcb_changed, char *pcb_filename, Main_Window *mw);
     static void exit_CB (Fl_Widget *w, Main_Window *mw);
     static void full_screen_CB (Fl_Menu_ *m, Main_Window *mw);
 

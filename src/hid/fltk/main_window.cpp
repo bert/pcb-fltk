@@ -70,7 +70,7 @@
 
 /*!
  * \brief Constructor for the main window.
- */ 
+ */
 Main_Window::Main_Window (int x, int y, int w, int h, const char *) : Fl_Overlay_Window (x, y, w, h, PROGRAM_NAME), _wx (x), _wy (y), _ww (w), _wh (h)
 {
   int transparent = Preferences::get ("transparent", 0);
@@ -884,6 +884,46 @@ Main_Window::handle (int event)
     default:
       return Fl_Overlay_Window::handle (event);
   }
+}
+
+
+/*!
+ * \brief Change main window title.
+ */
+void
+Main_Window::set_window_title (bool pcb_changed, char *pcb_filename, Main_Window *mw)
+{
+  /* pcb changed indicator "[*] " + program name + ": " + filename + "." + extension*/
+
+  char *_main_window_title;
+  char *filename;
+
+  if (!pcb_filename  || !*pcb_filename)
+  {
+    filename = strdup ("Unsaved.pcb");
+  }
+  else
+  {
+    filename = strdup (pcb_filename);
+  }
+
+  if (pcb_changed)
+  {
+    _main_window_title = strdup ("[*] ");
+    strcat (_main_window_title, PROGRAM_NAME);
+    strcat (_main_window_title, ": ");
+    strcat (_main_window_title, filename);
+    strcat (_main_window_title, "\n");
+  }
+  else
+  {
+    _main_window_title = strdup (PROGRAM_NAME);
+    strcat (_main_window_title, ": ");
+    strcat (_main_window_title, filename);
+    strcat (_main_window_title, "\n");
+  }
+
+  mw->label (_main_window_title);
 }
 
 
