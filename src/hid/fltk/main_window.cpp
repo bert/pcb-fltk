@@ -1034,9 +1034,19 @@ Main_Window::open_CB (Fl_Widget *, Main_Window *mw)
  * \brief Save a pcb layout.
  */
 void
-Main_Window::save_CB (Fl_Widget *, Main_Window *mw)
+Main_Window::save_CB (char *filename, Fl_Widget *w, Main_Window *mw)
 {
-  /*! \todo Add code here. */
+  /*! \todo Invoke functions properly. */
+  if (filename[0] == '\0')
+  {
+    /* No filename - get one! */
+    save_as_CB (w, mw);
+    return;
+  }
+  else
+  {
+//    save_file (filename);
+  }
 }
 
 

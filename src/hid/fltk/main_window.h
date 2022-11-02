@@ -257,7 +257,7 @@ class Main_Window : public Fl_Overlay_Window
     /* File menu item callbacks. */
     static void new_CB (Fl_Widget *w, Main_Window *mw);
     static void open_CB (Fl_Widget *w, Main_Window *mw);
-    static void save_CB (Fl_Widget *w, Main_Window *mw);
+    static void save_CB (char *filename, Fl_Widget *w, Main_Window *mw);
     static void save_as_CB (Fl_Widget *w, Main_Window *mw);
     static void revert_CB (Fl_Widget *w, Main_Window *mw);
     static void gschem_CB (Fl_Widget *w, Main_Window *mw);
